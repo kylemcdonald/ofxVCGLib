@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/vcg/!svn/ver/3824/trunk/vcglib/vcg/complex/edgemesh
+END
+base.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/vcg/!svn/ver/3824/trunk/vcglib/vcg/complex/edgemesh/base.h
+END
+unify.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/2944/trunk/vcglib/vcg/complex/edgemesh/unify.h
+END
+closest.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/vcg/!svn/ver/3270/trunk/vcglib/vcg/complex/edgemesh/closest.h
+END
+allocate.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/vcg/!svn/ver/2941/trunk/vcglib/vcg/complex/edgemesh/allocate.h
+END

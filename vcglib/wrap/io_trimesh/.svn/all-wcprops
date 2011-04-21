@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/vcg/!svn/ver/3895/trunk/vcglib/wrap/io_trimesh
+END
+export_dae.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3081/trunk/vcglib/wrap/io_trimesh/export_dae.h
+END
+export_3ds.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3755/trunk/vcglib/wrap/io_trimesh/export_3ds.h
+END
+io_ply.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/vcg/!svn/ver/440/trunk/vcglib/wrap/io_trimesh/io_ply.h
+END
+export_vmi.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3731/trunk/vcglib/wrap/io_trimesh/export_vmi.h
+END
+export_u3d.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3736/trunk/vcglib/wrap/io_trimesh/export_u3d.h
+END
+import_stl.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3451/trunk/vcglib/wrap/io_trimesh/import_stl.h
+END
+import_ply.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3879/trunk/vcglib/wrap/io_trimesh/import_ply.h
+END
+import_asc.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3457/trunk/vcglib/wrap/io_trimesh/import_asc.h
+END
+export_stl.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3461/trunk/vcglib/wrap/io_trimesh/export_stl.h
+END
+import_obj.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3644/trunk/vcglib/wrap/io_trimesh/import_obj.h
+END
+import_off.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3881/trunk/vcglib/wrap/io_trimesh/import_off.h
+END
+export_ply.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3622/trunk/vcglib/wrap/io_trimesh/export_ply.h
+END
+import_ptx.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3895/trunk/vcglib/wrap/io_trimesh/import_ptx.h
+END
+import.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/vcg/!svn/ver/3541/trunk/vcglib/wrap/io_trimesh/import.h
+END
+how_to_write_an_io_filter.txt
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/vcg/!svn/ver/2088/trunk/vcglib/wrap/io_trimesh/how_to_write_an_io_filter.txt
+END
+export_off.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3612/trunk/vcglib/wrap/io_trimesh/export_off.h
+END
+export_obj.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3779/trunk/vcglib/wrap/io_trimesh/export_obj.h
+END
+export_iv.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/vcg/!svn/ver/110/trunk/vcglib/wrap/io_trimesh/export_iv.h
+END
+import_smf.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/2096/trunk/vcglib/wrap/io_trimesh/import_smf.h
+END
+export_vrml.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/vcg/!svn/ver/3618/trunk/vcglib/wrap/io_trimesh/export_vrml.h
+END
+export.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/vcg/!svn/ver/2674/trunk/vcglib/wrap/io_trimesh/export.h
+END
+export_dxf.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/2096/trunk/vcglib/wrap/io_trimesh/export_dxf.h
+END
+io_mask.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/vcg/!svn/ver/3391/trunk/vcglib/wrap/io_trimesh/io_mask.h
+END
+import_dae.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3853/trunk/vcglib/wrap/io_trimesh/import_dae.h
+END
+import_raw.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3305/trunk/vcglib/wrap/io_trimesh/import_raw.h
+END
+additionalinfo.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/vcg/!svn/ver/3337/trunk/vcglib/wrap/io_trimesh/additionalinfo.h
+END
+import_vmi.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3752/trunk/vcglib/wrap/io_trimesh/import_vmi.h
+END
+io_material.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/vcg/!svn/ver/2790/trunk/vcglib/wrap/io_trimesh/io_material.h
+END
+export_smf.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/2298/trunk/vcglib/wrap/io_trimesh/export_smf.h
+END
+export_idtf.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/vcg/!svn/ver/3337/trunk/vcglib/wrap/io_trimesh/export_idtf.h
+END

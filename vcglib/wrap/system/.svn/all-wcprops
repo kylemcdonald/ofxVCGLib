@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svnroot/vcg/!svn/ver/3474/trunk/vcglib/wrap/system
+END
+getopt.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/vcg/!svn/ver/739/trunk/vcglib/wrap/system/getopt.cpp
+END
+qgetopt.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/vcg/!svn/ver/3474/trunk/vcglib/wrap/system/qgetopt.cpp
+END
+getopt.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/vcg/!svn/ver/739/trunk/vcglib/wrap/system/getopt.h
+END
+qgetopt.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/vcg/!svn/ver/3455/trunk/vcglib/wrap/system/qgetopt.h
+END

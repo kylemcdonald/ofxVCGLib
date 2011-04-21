@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svnroot/vcg/!svn/ver/3894/trunk/vcglib/wrap/gl
+END
+shaders.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/vcg/!svn/ver/3334/trunk/vcglib/wrap/gl/shaders.h
+END
+math.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/vcg/!svn/ver/3044/trunk/vcglib/wrap/gl/math.h
+END
+space.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/vcg/!svn/ver/3036/trunk/vcglib/wrap/gl/space.h
+END
+glu_tesselator.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/vcg/!svn/ver/3792/trunk/vcglib/wrap/gl/glu_tesselator.h
+END
+tetramesh.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/vcg/!svn/ver/3334/trunk/vcglib/wrap/gl/tetramesh.h
+END
+pos.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/vcg/!svn/ver/2318/trunk/vcglib/wrap/gl/pos.h
+END
+fbo.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/vcg/!svn/ver/3333/trunk/vcglib/wrap/gl/fbo.h
+END
+addons.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/vcg/!svn/ver/3022/trunk/vcglib/wrap/gl/addons.h
+END
+deprecated_math.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/vcg/!svn/ver/3032/trunk/vcglib/wrap/gl/deprecated_math.h
+END
+gl_surface.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/vcg/!svn/ver/2442/trunk/vcglib/wrap/gl/gl_surface.h
+END
+deprecated_space.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/vcg/!svn/ver/3423/trunk/vcglib/wrap/gl/deprecated_space.h
+END
+trimesh.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/vcg/!svn/ver/3793/trunk/vcglib/wrap/gl/trimesh.h
+END
+shot.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/vcg/!svn/ver/3682/trunk/vcglib/wrap/gl/shot.h
+END
+gl_geometry.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/vcg/!svn/ver/2613/trunk/vcglib/wrap/gl/gl_geometry.h
+END
+picking.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/vcg/!svn/ver/3306/trunk/vcglib/wrap/gl/picking.h
+END
+pick.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/vcg/!svn/ver/3619/trunk/vcglib/wrap/gl/pick.h
+END
+gl_object.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/vcg/!svn/ver/3334/trunk/vcglib/wrap/gl/gl_object.h
+END
+camera.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/vcg/!svn/ver/3890/trunk/vcglib/wrap/gl/camera.h
+END

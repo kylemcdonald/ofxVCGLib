@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svnroot/vcg/!svn/ver/3332/trunk/vcglib/wrap/bmt
+END
+bmt.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/vcg/!svn/ver/3332/trunk/vcglib/wrap/bmt/bmt.cpp
+END
+strip_mesh.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/vcg/!svn/ver/201/trunk/vcglib/wrap/bmt/strip_mesh.h
+END
+bmt.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/vcg/!svn/ver/201/trunk/vcglib/wrap/bmt/bmt.h
+END

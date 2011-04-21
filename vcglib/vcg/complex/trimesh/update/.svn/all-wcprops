@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/vcg/!svn/ver/3886/trunk/vcglib/vcg/complex/trimesh/update
+END
+halfedge_topology.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/vcg/!svn/ver/3812/trunk/vcglib/vcg/complex/trimesh/update/halfedge_topology.h
+END
+halfedge_indexed.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/vcg/!svn/ver/3863/trunk/vcglib/vcg/complex/trimesh/update/halfedge_indexed.h
+END
+texture.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/vcg/!svn/ver/2776/trunk/vcglib/vcg/complex/trimesh/update/texture.h
+END
+fitmaps.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/vcg/!svn/ver/3808/trunk/vcglib/vcg/complex/trimesh/update/fitmaps.h
+END
+position.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/vcg/!svn/ver/2729/trunk/vcglib/vcg/complex/trimesh/update/position.h
+END
+curvature_fitting.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/vcg/!svn/ver/3802/trunk/vcglib/vcg/complex/trimesh/update/curvature_fitting.h
+END
+bounding.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/vcg/!svn/ver/2729/trunk/vcglib/vcg/complex/trimesh/update/bounding.h
+END
+flag.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/vcg/!svn/ver/3661/trunk/vcglib/vcg/complex/trimesh/update/flag.h
+END
+topology.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/vcg/!svn/ver/3677/trunk/vcglib/vcg/complex/trimesh/update/topology.h
+END
+color.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/vcg/!svn/ver/3831/trunk/vcglib/vcg/complex/trimesh/update/color.h
+END
+curvature.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/vcg/!svn/ver/3847/trunk/vcglib/vcg/complex/trimesh/update/curvature.h
+END
+selection.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/vcg/!svn/ver/3844/trunk/vcglib/vcg/complex/trimesh/update/selection.h
+END
+edges.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/vcg/!svn/ver/3638/trunk/vcglib/vcg/complex/trimesh/update/edges.h
+END
+quality.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/vcg/!svn/ver/3886/trunk/vcglib/vcg/complex/trimesh/update/quality.h
+END
+normal.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/vcg/!svn/ver/3834/trunk/vcglib/vcg/complex/trimesh/update/normal.h
+END

@@ -8,6 +8,250 @@
 
 #include "ofxVCGLib.h"
 
+ofMesh* ofxVCGLib::intersectMeshes(vector<ofMesh> meshes)
+{
+	
+	//tri::Append<MyMesh,MyMesh>::Mesh(ml,mr);
+}
+
+ofMesh* ofxVCGLib::createMeshFromCloud(ofxVCGCloud* cloud)
+{
+
+	// up to you to manage this one, but this really should be a smart ptr
+	ofMesh* mesh = new ofMesh();
+	
+}
+
+void ofxVCGLib::cleanMesh(ofMesh* mesh)
+{
+	
+	innerMesh m(mesh);
+	
+	int dup = tri::Clean<innerMesh>::RemoveDuplicateVertex(m);
+	int unref =  tri::Clean<innerMesh>::RemoveUnreferencedVertex(m);
+
+	// updating
+	UpdateBounding<innerMesh>::Box(m);
+	UpdateNormals<innerMesh>::PerFaceNormalized(m);
+	UpdateNormals<innerMesh>::PerVertexAngleWeighted(m);
+	UpdateNormals<innerMesh>::NormalizeVertex(m);
+	UpdateFlags<innerMesh>::FaceProjection(m);
+}
+
+// make this read in files too
+void ofxVCGLib::smoothMesh(ofMesh* mesh, int steps, int smoothingAmount)
+{
+	innerMesh m(mesh);
+	
+	int dup = tri::Clean<innerMesh>::RemoveDuplicateVertex(m);
+	int unref =  tri::Clean<innerMesh>::RemoveUnreferencedVertex(m);
+	
+	cout << " removed " << dup << " dup vertices and " << unref << " unref'd ones " << endl;
+	
+	tri::UpdateTopology<innerMesh>::VertexFace(m);
+	
+	for(int i=0;i<steps;++i)
+	{
+		tri::UpdateNormals<innerMesh>::PerFaceNormalized(m);
+		tri::Smooth<innerMesh>::VertexCoordPasoDobleFast(m, smoothingAmount);
+	}
+}
+
+void ofxVCGLib::refineMesh(ofMesh* mesh, int steps, int type=0)
+{
+	
+	float length = 0;
+	innerMesh m(mesh);
+	int i;
+	for(i=0;i < steps;++i)			
+	{
+		switch(type)
+		{
+				// some weird template madness, this doesn't compile :|
+/*			case 0:
+				vcg::Refine<innerMesh, MidPoint<innerMesh> >(m,MidPoint<innerMesh>(&m),length);
+				break;
+			case 1:
+				tri::RefineOddEven<innerMesh, tri::OddPointLoop<innerMesh>, tri::EvenPointLoop<innerMesh> >(m, tri::OddPointLoop<innerMesh>(), tri::EvenPointLoop<innerMesh>(), length);
+				break;
+			case 2:
+				tri::BitQuadCreation<innerMesh>::MakePureByCatmullClark(m);
+				tri::UpdateNormals<innerMesh>::PerBitQuadFaceNormalized(m);
+				break;      
+			case 3:
+				tri::BitQuadCreation<innerMesh>::MakePureByRefine(m);
+				tri::UpdateNormals<innerMesh>::PerBitQuadFaceNormalized(m);
+				break;
+			case 4:
+				Refine<innerMesh, MidPointButterfly<innerMesh> >(m,MidPointButterfly<innerMesh>(),length);
+				break; */
+		}		
+	}
+	
+}
+
+// huh?
+void simplifyNode(ofNode* node, int degree)
+{
+}
+
+
+ofMesh* ofxVCGLib::differenceMeshes(vector<ofMesh> meshes)
+{
+}
+
+ofMesh* ofxVCGLib::joinMeshes( ofMesh* toBeParent, vector<ofMesh*> toBeJoined )
+{
+	innerMesh mP(toBeParent);
+	
+	vector<ofMesh*>::iterator meshIt = toBeJoined.begin();
+	while(meshIt != toBeJoined.end()) {
+		innerMesh mC( *meshIt ); // messy
+		tri::Append<innerMesh,innerMesh>::Mesh(mP,mC); // join them
+		++meshIt;
+	}
+	
+	tri::Clean<innerMesh>::RemoveDuplicateVertex(mP); // now clean it up 
+	
+}
+
+ofMesh* ofxVCGLib::joinMeshes( ofMesh* toBeParent, ofMesh* toBeChild )
+{
+	innerMesh mP(toBeParent);
+	innerMesh mC(toBeChild);
+	
+	tri::Append<innerMesh,innerMesh>::Mesh(mP,mC); // join them
+	tri::Clean<innerMesh>::RemoveDuplicateVertex(mP); // now clean it up 
+	
+}
+
+
+
+ofNode* ofxVCGLib::intersectNodes(vector<ofNode> nodes)
+{
+}
+
+
+ofNode* ofxVCGLib::differenceNodes(vector<ofNode> nodes)
+{
+}
+
+
+ofNode* ofxVCGLib::joinNodes(vector<ofNode> nodes)
+{
+}
+
+
+
+bool ofxVCGLib::meshIntersection(ofMesh* aNode, ofMesh* bNode)
+{
+}
+
+
+bool ofxVCGLib::nodeIntersection(ofNode* aNode, ofNode* bNode)
+{
+}
+
+
+
+// smart pointers would be freaking sweet here
+ofxVCGCloud* ofxVCGLib::createCloudFromMesh(ofMesh* mesh)
+{
+}
+
+
+ofMesh* ofxVCGLib::createMeshFromPoints(vector<ofVec3f> points, int degreeOfFidelity)
+{
+}
+
+
+ofMesh* ofxVCGLib::createMeshFromPoints(vector<ofVec2f> points, int degreeOfFidelity)
+{
+}
+
+
+
+ofxVCGCloud* ofxVCGLib::createCloudFromPoints(vector<ofVec2f> points)
+{
+}
+
+
+
+ofxVCGCloud* ofxVCGLib::createCloudFromPoints(vector<ofVec3f> points)
+{
+	
+	innerMesh m;
+	
+	m.face.clear();
+	m.fn = 0;	
+	m.Clear();
+	
+	vector<ofVec3f>::iterator pIt = points.begin();
+	while (pIt != points.end()) {
+		ofxVCGVertex mv;
+		mv.P() = Point3f(pIt->x,pIt->y,pIt->z);
+		m.vert.push_back(mv);
+		m.vn++;
+		
+		++pIt;
+	}
+	
+	vcg::tri::UpdateBounding<innerMesh>::Box(m);
+	vcg::tri::UpdateNormals<innerMesh>::PerFace(m);	
+	
+	/*
+	legacyPivot = NULL;
+	if (legacyPivot) delete legacyPivot;
+	legacyPivot = new tri::BallPivoting<innerMesh>(m, _radius, _clustering, _angle); 	
+	legacyPivot->BuildMesh();
+	
+	NormalExtrapolation<vector<CVertex> >::ExtrapolateNormals(m.vert.begin(), m.vert.end(), 2);	
+	
+	pivot = new tri::ofxVCGPivot<CMesh>(m, _radius, _clustering, _angle);
+	*/
+	
+}
+
+void getFacesForRay(ofxVCGRay ray, ofMesh* mesh)
+{
+	innerMesh m(mesh);
+	float t;
+	float maxDist = 1000;
+	
+	// Create a static grid (for fast indexing) and fill it
+	innerMeshGrid grid;
+	grid.Set(m.face.begin(), m.face.end());
+	
+	// convert the ray
+	vcg::Ray3f vcg_ray;
+	vcg::Point3f beg(ray.begin.x, ray.begin.y, ray.begin.z);
+	vcg::Point3f dir(ray.direction.x, ray.direction.y, ray.direction.z);
+	vcg_ray.SetOrigin(beg);
+	vcg_ray.SetDirection(dir);
+	
+	// now actually find the face
+	innerMeshFace *rf = tri::DoRay<innerMesh,innerMeshGrid>(m, grid, vcg_ray, maxDist, t);
+	
+}
+
+void ofxVCGLib::pointsToPlane(vector<ofVec2f> points)
+{
+}
+
+
+// don't really like the c-style-ness of this
+void ofxVCGLib::getNeighboringFaces(ofxMeshFace* face, ofMesh* mesh)
+{
+}
+
+void ofxVCGLib::getFacesFromMesh(vector<ofxMeshFace>* faces, ofMesh* mesh){
+}
+
+void ofxVCGLib::constructMeshFromFaces(ofMesh* mesh, vector<ofxMeshFace>* faces){
+}
+
+
+/*
 void ofxVCGLib::reconstructFaceBunny(float _radius, 
 									 float _clustering,
 									 float _angle) {
@@ -145,3 +389,4 @@ int ofxVCGLib::getFaceNum() {
 	return m.face.size();
 	
 }
+*/

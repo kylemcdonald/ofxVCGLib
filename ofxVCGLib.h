@@ -9,59 +9,87 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxVectorMath.h"
-#include "BunnyMesh.h"
 
-#include "vcglib/vcg/simplex/vertex/base.h"
-#include "vcglib/vcg/simplex/face/base.h"
-#include "vcglib/vcg/simplex/face/topology.h"
-#include "vcglib/vcg/complex/trimesh/base.h"
-#include "vcglib/vcg/complex/trimesh/update/bounding.h"
-#include "vcglib/vcg/complex/trimesh/update/topology.h"
-#include "vcglib/vcg/complex/trimesh/update/normal.h"
-#include "vcglib/vcg/complex/trimesh/update/flag.h"
-#include "vcglib/vcg/complex/trimesh/create/ball_pivoting.h"
-//#include "vcglib/vcg/space/box3.h"
-#include "vcglib/vcg/space/normal_extrapolation.h"
+#include <math.h>
 
-#include "cmesh.h"
-#include "ofxVCGPivot.h"
+#include <vcg/simplex/vertex/base.h>
+#include <vcg/simplex/face/base.h>
+#include <vcg/simplex/face/component_ocf.h>
+#include <vcg/simplex/face/topology.h>
+#include <vcg/space/normal_extrapolation.h>
+
+#include<vcg/simplex/face/component_ocf.h>
+
+#include <vcg/complex/trimesh/base.h>
+
+#include <vcg/complex/trimesh/update/bounding.h>
+#include <vcg/complex/trimesh/update/topology.h>
+#include <vcg/complex/trimesh/update/normal.h>
+#include <vcg/complex/trimesh/update/flag.h>
+#include <vcg/complex/trimesh/create/ball_pivoting.h>
+
+#include <vcg/complex/trimesh/base.h>
+
+//#include <vcg/complex/trimesh/refine.h>
+//#include <vcg/complex/trimesh/refine_loop.h>
+
+#include <vcg/complex/trimesh/bitquad_creation.h>
+
+// to clean up a mesh
+#include <vcg/complex/trimesh/append.h>
+#include <vcg/complex/trimesh/clean.h>
+#include<vcg/complex/trimesh/smooth.h>
+#include <vcg/complex/trimesh/clip.h>
+
+#include "ofxVCGLibDefinitions.h"
+#include "ofxMeshFace.h"
 
 using namespace vcg;
 using namespace tri;
 
 
-class ofxVCGLib {
+class ofxVCGLib 
+{
 
 public:
 	
-	// for bunny mesh test :)
-	void reconstructFaceBunny(float _radius = 0.22, 
-							  float _clustering = 0.05,
-							  float _angle = M_PI/2); 
-	
-	// if radius ==0 an autoguess for the ball pivoting radius is attempted 
-	// otherwise the passed value (in absolute mesh units) is used.	
-	void reconstructFacePointCloud(vector<float> point_cloud, 
-								   float _radius = 0, 
-								   float _clustering = 0.2,
-								   float _angle = M_PI/2);
-	bool addFace();
+	// to do - calculate normals intelligently
 
-	float getRadius() { return radius; }
-	float getClustering() { return clustering; }
-	float getAngle() { return angle; }
+	void refineMesh(ofMesh* mesh, int steps, int type);
+	void smoothMesh(ofMesh* mesh, int steps, int smoothingAmount);
 	
-	vector<float> getVertices();
-	vector<int> getFaceIndices();
-	int getFaceNum();
-	
-	CMesh m;	
-	ofxVCGPivot<CMesh> *pivot;	
-	BallPivoting<CMesh> *legacyPivot;
-	
-	float radius;
-	float clustering;
-	float angle;
+	void simplifyNode(ofNode* mesh, int degree);
+
+	ofMesh* intersectMeshes(vector<ofMesh> meshes);
+	ofMesh* differenceMeshes(vector<ofMesh> meshes);
+
+	ofMesh* joinMeshes(ofMesh* toBeParent, ofMesh* toBeChild);
+	ofMesh* joinMeshes(ofMesh* toBeParent, vector<ofMesh*> toBeJoined);
+
+	ofNode* intersectNodes(vector<ofNode> nodes);
+	ofNode* differenceNodes(vector<ofNode> nodes);
+	ofNode* joinNodes(vector<ofNode> nodes);
+
+	bool meshIntersection(ofMesh* aMesh, ofMesh* bMesh);
+	bool nodeIntersection(ofNode* aNode, ofNode* bNode);
+
+	// smart pointers would be freaking sweet here
+	ofxVCGCloud* createCloudFromMesh(ofMesh* mesh);
+	ofMesh* createMeshFromCloud(ofxVCGCloud* mesh);
+
+	ofMesh* createMeshFromPoints(vector<ofVec3f> points, int degreeOfFidelity);
+	ofMesh* createMeshFromPoints(vector<ofVec2f> points, int degreeOfFidelity);
+
+	ofxVCGCloud* createCloudFromPoints(vector<ofVec2f> points);
+	ofxVCGCloud* createCloudFromPoints(vector<ofVec3f> points);
+
+	void pointsToPlane(vector<ofVec2f> points);
+	void cleanMesh(ofMesh* mesh);
+
+	// don't really like the c-style-ness of this
+	void getNeighboringFaces(ofxMeshFace* face, ofMesh* mesh);
+	void getFacesFromMesh(vector<ofxMeshFace>* faces, ofMesh* mesh);
+	void constructMeshFromFaces(ofMesh* mesh, vector<ofxMeshFace>* faces);
+	void getFacesForRay(ofxVCGRay ray, ofMesh* mesh);
 	
 };

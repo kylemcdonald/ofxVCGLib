@@ -1,0 +1,6 @@
+K 13
+svn:externals
+V 76
+Eigen svn://svn.tuxfamily.org/svnroot/eigen/eigen2mirror/branches/2.0/Eigen
+
+END

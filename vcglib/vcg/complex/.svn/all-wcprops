@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svnroot/vcg/!svn/ver/3898/trunk/vcglib/vcg/complex
+END
+all_types.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/vcg/!svn/ver/3740/trunk/vcglib/vcg/complex/all_types.h
+END
+local_optimization.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/vcg/!svn/ver/3806/trunk/vcglib/vcg/complex/local_optimization.h
+END
+boundary.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/vcg/!svn/ver/2483/trunk/vcglib/vcg/complex/boundary.h
+END
+used_types.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/vcg/!svn/ver/3766/trunk/vcglib/vcg/complex/used_types.h
+END
+intersection.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/vcg/!svn/ver/3827/trunk/vcglib/vcg/complex/intersection.h
+END

@@ -876,14 +876,12 @@ void TriSplit(typename TRIMESH_TYPE::FacePointer f,
 		f->FFp(2)->FFp(f->FFi(2)) = f2;
 
 		//adiacenza ff
-		typename TRIMESH_TYPE::FacePointer FFa,FFb,FFc;
-		FFa = f->FFp(0);
-		FFb = f->FFp(1);
-		FFc = f->FFp(2);		
-//		typename TRIMESH_TYPE::FacePointer FF0,FF1,FF2;
-//		FF0 = f->FFp(0);
-//		FF1 = f->FFp(1);
-//		FF2 = f->FFp(2);
+		typename TRIMESH_TYPE::FacePointer FF0;
+		typename TRIMESH_TYPE::FacePointer FF1;
+		typename TRIMESH_TYPE::FacePointer FF2;
+		FF0 = f->FFp(0);
+		FF1 = f->FFp(1);
+		FF2 = f->FFp(2);
 
 		//Indici di adiacenza ff
 		char FFi0,FFi1,FFi2;
@@ -901,7 +899,7 @@ void TriSplit(typename TRIMESH_TYPE::FacePointer f,
 		(*f1).FFp(0) = f;
 		(*f1).FFi(0) = 1;
 
-		(*f1).FFp(1) = FFb;
+		(*f1).FFp(1) = FF1;
 		(*f1).FFi(1) = FFi1;
 
 		(*f1).FFp(2) = &(*f2);
@@ -914,7 +912,7 @@ void TriSplit(typename TRIMESH_TYPE::FacePointer f,
 		(*f2).FFp(1) = &(*f1);
 		(*f2).FFi(1) = 2;
 
-		(*f2).FFp(2) = FFc;
+		(*f2).FFp(2) = FF2;
 		(*f2).FFi(2) = FFi2;
 	}
 }

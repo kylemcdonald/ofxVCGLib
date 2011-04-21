@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svnroot/vcg/!svn/ver/3889/trunk/vcglib/wrap/qt
+END
+checkGLError.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/vcg/!svn/ver/3689/trunk/vcglib/wrap/qt/checkGLError.h
+END
+trackball.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/vcg/!svn/ver/3372/trunk/vcglib/wrap/qt/trackball.h
+END
+img_qt.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/vcg/!svn/ver/3432/trunk/vcglib/wrap/qt/img_qt.h
+END
+img_qt_convert.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/vcg/!svn/ver/3432/trunk/vcglib/wrap/qt/img_qt_convert.h
+END
+col_qt_convert.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/vcg/!svn/ver/3558/trunk/vcglib/wrap/qt/col_qt_convert.h
+END
+gl_label.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/vcg/!svn/ver/3887/trunk/vcglib/wrap/qt/gl_label.h
+END
+shot_qt.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/vcg/!svn/ver/3889/trunk/vcglib/wrap/qt/shot_qt.h
+END
+img_qt_io.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/vcg/!svn/ver/3432/trunk/vcglib/wrap/qt/img_qt_io.h
+END
+to_string.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/vcg/!svn/ver/3814/trunk/vcglib/wrap/qt/to_string.h
+END

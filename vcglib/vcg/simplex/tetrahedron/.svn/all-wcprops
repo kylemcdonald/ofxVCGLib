@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/vcg/!svn/ver/3191/trunk/vcglib/vcg/simplex/tetrahedron
+END
+base.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/vcg/!svn/ver/3191/trunk/vcglib/vcg/simplex/tetrahedron/base.h
+END
+tetrahedron.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/vcg/!svn/ver/710/trunk/vcglib/vcg/simplex/tetrahedron/tetrahedron.h
+END
+pos.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/vcg/!svn/ver/1565/trunk/vcglib/vcg/simplex/tetrahedron/pos.h
+END
+component.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/vcg/!svn/ver/3144/trunk/vcglib/vcg/simplex/tetrahedron/component.h
+END
+base_old.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/vcg/!svn/ver/3144/trunk/vcglib/vcg/simplex/tetrahedron/base_old.h
+END

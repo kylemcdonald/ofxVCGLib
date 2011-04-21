@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svnroot/vcg/!svn/ver/3902/trunk/vcglib/vcg/math
+END
+deprecated_matrix33.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/vcg/!svn/ver/3229/trunk/vcglib/vcg/math/deprecated_matrix33.h
+END
+deprecated_matrix44.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/vcg/!svn/ver/3858/trunk/vcglib/vcg/math/deprecated_matrix44.h
+END
+histogram.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/vcg/!svn/ver/3840/trunk/vcglib/vcg/math/histogram.h
+END
+eigen_matrixbase_addons.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/vcg/!svn/ver/3235/trunk/vcglib/vcg/math/eigen_matrixbase_addons.h
+END
+disjoint_set.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/vcg/!svn/ver/2067/trunk/vcglib/vcg/math/disjoint_set.h
+END
+lin_algebra.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/vcg/!svn/ver/3831/trunk/vcglib/vcg/math/lin_algebra.h
+END
+eigen_matrix_addons.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/vcg/!svn/ver/3052/trunk/vcglib/vcg/math/eigen_matrix_addons.h
+END
+point_matching.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/vcg/!svn/ver/3643/trunk/vcglib/vcg/math/point_matching.h
+END
+matrix.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/vcg/!svn/ver/3031/trunk/vcglib/vcg/math/matrix.h
+END
+factorial.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/vcg/!svn/ver/2862/trunk/vcglib/vcg/math/factorial.h
+END
+polar_decomposition.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/vcg/!svn/ver/3020/trunk/vcglib/vcg/math/polar_decomposition.h
+END
+linear.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/vcg/!svn/ver/3022/trunk/vcglib/vcg/math/linear.h
+END
+base.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/vcg/!svn/ver/3830/trunk/vcglib/vcg/math/base.h
+END
+matrix33.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/vcg/!svn/ver/3034/trunk/vcglib/vcg/math/matrix33.h
+END
+matrix44.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/vcg/!svn/ver/3044/trunk/vcglib/vcg/math/matrix44.h
+END
+shot.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/vcg/!svn/ver/3880/trunk/vcglib/vcg/math/shot.h
+END
+spherical_harmonics.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/vcg/!svn/ver/3603/trunk/vcglib/vcg/math/spherical_harmonics.h
+END
+gen_normal.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/vcg/!svn/ver/3649/trunk/vcglib/vcg/math/gen_normal.h
+END
+deprecated_matrix.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3858/trunk/vcglib/vcg/math/deprecated_matrix.h
+END
+legendre.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/vcg/!svn/ver/3523/trunk/vcglib/vcg/math/legendre.h
+END
+quaternion.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/vcg/!svn/ver/3421/trunk/vcglib/vcg/math/quaternion.h
+END
+perlin_noise.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/vcg/!svn/ver/2731/trunk/vcglib/vcg/math/perlin_noise.h
+END
+random_generator.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/vcg/!svn/ver/3245/trunk/vcglib/vcg/math/random_generator.h
+END
+similarity.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/vcg/!svn/ver/3902/trunk/vcglib/vcg/math/similarity.h
+END
+eigen.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/vcg/!svn/ver/3444/trunk/vcglib/vcg/math/eigen.h
+END
+camera.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/vcg/!svn/ver/3890/trunk/vcglib/vcg/math/camera.h
+END
+quadric.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/vcg/!svn/ver/3282/trunk/vcglib/vcg/math/quadric.h
+END

@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/vcg/!svn/ver/3898/trunk/vcglib/vcg/complex/trimesh
+END
+inertia.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/vcg/!svn/ver/3771/trunk/vcglib/vcg/complex/trimesh/inertia.h
+END
+bitquad_optimization.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svnroot/vcg/!svn/ver/3525/trunk/vcglib/vcg/complex/trimesh/bitquad_optimization.h
+END
+refine_loop.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/vcg/!svn/ver/3856/trunk/vcglib/vcg/complex/trimesh/refine_loop.h
+END
+overlap_estimation.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svnroot/vcg/!svn/ver/3454/trunk/vcglib/vcg/complex/trimesh/overlap_estimation.h
+END
+subset.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3764/trunk/vcglib/vcg/complex/trimesh/subset.h
+END
+append.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3835/trunk/vcglib/vcg/complex/trimesh/append.h
+END
+attribute_seam.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/vcg/!svn/ver/3767/trunk/vcglib/vcg/complex/trimesh/attribute_seam.h
+END
+refine.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3384/trunk/vcglib/vcg/complex/trimesh/refine.h
+END
+smooth.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/3860/trunk/vcglib/vcg/complex/trimesh/smooth.h
+END
+base.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/vcg/!svn/ver/3781/trunk/vcglib/vcg/complex/trimesh/base.h
+END
+inside.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/vcg/!svn/ver/2948/trunk/vcglib/vcg/complex/trimesh/inside.h
+END
+stat.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/vcg/!svn/ver/3837/trunk/vcglib/vcg/complex/trimesh/stat.h
+END
+closest.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/vcg/!svn/ver/3789/trunk/vcglib/vcg/complex/trimesh/closest.h
+END
+autoalign_4pcs.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/vcg/!svn/ver/3764/trunk/vcglib/vcg/complex/trimesh/autoalign_4pcs.h
+END
+bitquad_creation.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/vcg/!svn/ver/3820/trunk/vcglib/vcg/complex/trimesh/bitquad_creation.h
+END
+crease_cut.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/vcg/!svn/ver/3764/trunk/vcglib/vcg/complex/trimesh/crease_cut.h
+END
+nring.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/vcg/!svn/ver/3807/trunk/vcglib/vcg/complex/trimesh/nring.h
+END
+clustering.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/vcg/!svn/ver/3685/trunk/vcglib/vcg/complex/trimesh/clustering.h
+END
+textcoord_optimization.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/vcg/!svn/ver/3016/trunk/vcglib/vcg/complex/trimesh/textcoord_optimization.h
+END
+geodesic.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/vcg/!svn/ver/3831/trunk/vcglib/vcg/complex/trimesh/geodesic.h
+END
+clean.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/vcg/!svn/ver/3874/trunk/vcglib/vcg/complex/trimesh/clean.h
+END
+point_sampling.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/vcg/!svn/ver/3848/trunk/vcglib/vcg/complex/trimesh/point_sampling.h
+END
+polygon_support.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/vcg/!svn/ver/3862/trunk/vcglib/vcg/complex/trimesh/polygon_support.h
+END
+allocate.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/vcg/!svn/ver/3898/trunk/vcglib/vcg/complex/trimesh/allocate.h
+END
+bitquad_support.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/vcg/!svn/ver/3527/trunk/vcglib/vcg/complex/trimesh/bitquad_support.h
+END
+edge_collapse.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/vcg/!svn/ver/3818/trunk/vcglib/vcg/complex/trimesh/edge_collapse.h
+END
+clip.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/vcg/!svn/ver/3859/trunk/vcglib/vcg/complex/trimesh/clip.h
+END
+hole.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/vcg/!svn/ver/3878/trunk/vcglib/vcg/complex/trimesh/hole.h
+END

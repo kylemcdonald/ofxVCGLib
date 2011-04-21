@@ -1,0 +1,138 @@
+10
+
+dir
+3903
+https://vcg.svn.sourceforge.net/svnroot/vcg/trunk/vcglib/wrap
+https://vcg.svn.sourceforge.net/svnroot/vcg
+
+
+
+2010-11-22T16:48:02.514653Z
+3903
+ponchio
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+e8973e21-934d-0410-ac44-de4585f5606d
+
+mt
+dir
+
+callback.h
+file
+
+
+
+
+2010-11-26T15:36:06.000000Z
+f9a6dff9925fc1e740d399ae15c852dc
+2004-07-15T11:00:39.000000Z
+551
+ganovelli
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2760
+
+minpack
+dir
+
+bmt
+dir
+
+io_tetramesh
+dir
+
+system
+dir
+
+qt
+dir
+
+gui
+dir
+
+utils.h
+file
+
+
+
+
+2010-11-26T15:36:06.000000Z
+4276f421e179ddad9722c858ad902e1c
+2006-10-13T13:10:05.000000Z
+1989
+cignoni
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3295
+
+math
+dir
+
+dae
+dir
+
+opensg
+dir
+
+io_trimesh
+dir
+
+gl
+dir
+
+ply
+dir
+
+io_edgemesh
+dir
+
