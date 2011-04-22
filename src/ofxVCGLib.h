@@ -48,13 +48,8 @@ using namespace vcg;
 using namespace tri;
 
 
-class ofxVCGLib 
-{
-
-public:
+namespace ofxVCG {
 	
-	// to do - calculate normals intelligently
-
 	void refineMesh(ofMesh* mesh, int steps, int type);
 	void smoothMesh(ofMesh* mesh, int steps, int smoothingAmount);
 	
@@ -91,5 +86,9 @@ public:
 	void getFacesFromMesh(vector<ofxMeshFace>* faces, ofMesh* mesh);
 	void constructMeshFromFaces(ofMesh* mesh, vector<ofxMeshFace>* faces);
 	void getFacesForRay(ofxVCGRay ray, ofMesh* mesh);
+	
+	// aka the kyle mcdonald functions
+	void vcgMeshToOf(innerMesh* inner, ofMesh* mesh);
+	void vcgVec3ToOf(innerMesh* inner, ofMesh* mesh);
 	
 };

@@ -8,13 +8,13 @@
 
 #include "ofxVCGLib.h"
 
-ofMesh* ofxVCGLib::intersectMeshes(vector<ofMesh> meshes)
+ofMesh* ofxVCG::intersectMeshes(vector<ofMesh> meshes)
 {
 	
 	//tri::Append<MyMesh,MyMesh>::Mesh(ml,mr);
 }
 
-ofMesh* ofxVCGLib::createMeshFromCloud(ofxVCGCloud* cloud)
+ofMesh* ofxVCG::createMeshFromCloud(ofxVCGCloud* cloud)
 {
 
 	// up to you to manage this one, but this really should be a smart ptr
@@ -22,7 +22,7 @@ ofMesh* ofxVCGLib::createMeshFromCloud(ofxVCGCloud* cloud)
 	
 }
 
-void ofxVCGLib::cleanMesh(ofMesh* mesh)
+void ofxVCG::cleanMesh(ofMesh* mesh)
 {
 	
 	innerMesh m(mesh);
@@ -36,28 +36,49 @@ void ofxVCGLib::cleanMesh(ofMesh* mesh)
 	UpdateNormals<innerMesh>::PerVertexAngleWeighted(m);
 	UpdateNormals<innerMesh>::NormalizeVertex(m);
 	UpdateFlags<innerMesh>::FaceProjection(m);
+	
+	// copy back
 }
 
 // make this read in files too
-void ofxVCGLib::smoothMesh(ofMesh* mesh, int steps, int smoothingAmount)
+void ofxVCG::smoothMesh(ofMesh* mesh, int steps, int smoothingAmount)
 {
 	innerMesh m(mesh);
 	
-	int dup = tri::Clean<innerMesh>::RemoveDuplicateVertex(m);
-	int unref =  tri::Clean<innerMesh>::RemoveUnreferencedVertex(m);
+	// probably want different meshes for each method
+	// but the laplacian is one of the simpler
+	tri::Smooth<innerMesh>::VertexCoordLaplacian(m, steps); 
 	
-	cout << " removed " << dup << " dup vertices and " << unref << " unref'd ones " << endl;
+	vcgMeshToOf(&m, mesh);
 	
-	tri::UpdateTopology<innerMesh>::VertexFace(m);
-	
-	for(int i=0;i<steps;++i)
-	{
-		tri::UpdateNormals<innerMesh>::PerFaceNormalized(m);
-		tri::Smooth<innerMesh>::VertexCoordPasoDobleFast(m, smoothingAmount);
-	}
 }
 
-void ofxVCGLib::refineMesh(ofMesh* mesh, int steps, int type=0)
+void ofxVCG::vcgMeshToOf(innerMesh* inner, ofMesh* mesh)
+{
+	// this desperately needs to be smarter, big meshes are going to
+	// be bears to deal with.
+	mesh->clear();
+	
+	innerMesh::VertexIterator vi = inner->vert.begin();
+	while(vi != inner->vert.end())
+	{
+		mesh->addVertex(vi->toOf());
+		ofVec3f vec(vi->N().X(), vi->N().Y(), vi->N().Z());
+		mesh->addNormal(vec);
+		++vi;
+	}
+	
+	vector<int> faceIndices = inner->getFaceIndices();
+	vector<int>::iterator fi = faceIndices.begin();
+	while(fi != faceIndices.end())
+	{
+		mesh->addIndex(*fi);
+		++fi;
+	}
+}
+							
+
+void ofxVCG::refineMesh(ofMesh* mesh, int steps, int type=0)
 {
 	
 	float length = 0;
@@ -90,17 +111,17 @@ void ofxVCGLib::refineMesh(ofMesh* mesh, int steps, int type=0)
 	
 }
 
-// huh?
-void simplifyNode(ofNode* node, int degree)
+// hmm
+void ofxVCG::simplifyNode(ofNode* node, int degree)
 {
 }
 
 
-ofMesh* ofxVCGLib::differenceMeshes(vector<ofMesh> meshes)
+ofMesh* ofxVCG::differenceMeshes(vector<ofMesh> meshes)
 {
 }
 
-ofMesh* ofxVCGLib::joinMeshes( ofMesh* toBeParent, vector<ofMesh*> toBeJoined )
+ofMesh* ofxVCG::joinMeshes( ofMesh* toBeParent, vector<ofMesh*> toBeJoined )
 {
 	innerMesh mP(toBeParent);
 	
@@ -115,7 +136,7 @@ ofMesh* ofxVCGLib::joinMeshes( ofMesh* toBeParent, vector<ofMesh*> toBeJoined )
 	
 }
 
-ofMesh* ofxVCGLib::joinMeshes( ofMesh* toBeParent, ofMesh* toBeChild )
+ofMesh* ofxVCG::joinMeshes( ofMesh* toBeParent, ofMesh* toBeChild )
 {
 	innerMesh mP(toBeParent);
 	innerMesh mC(toBeChild);
@@ -127,57 +148,57 @@ ofMesh* ofxVCGLib::joinMeshes( ofMesh* toBeParent, ofMesh* toBeChild )
 
 
 
-ofNode* ofxVCGLib::intersectNodes(vector<ofNode> nodes)
+ofNode* ofxVCG::intersectNodes(vector<ofNode> nodes)
 {
 }
 
 
-ofNode* ofxVCGLib::differenceNodes(vector<ofNode> nodes)
+ofNode* ofxVCG::differenceNodes(vector<ofNode> nodes)
 {
 }
 
 
-ofNode* ofxVCGLib::joinNodes(vector<ofNode> nodes)
+ofNode* ofxVCG::joinNodes(vector<ofNode> nodes)
 {
 }
 
 
 
-bool ofxVCGLib::meshIntersection(ofMesh* aNode, ofMesh* bNode)
+bool ofxVCG::meshIntersection(ofMesh* aNode, ofMesh* bNode)
 {
 }
 
 
-bool ofxVCGLib::nodeIntersection(ofNode* aNode, ofNode* bNode)
+bool ofxVCG::nodeIntersection(ofNode* aNode, ofNode* bNode)
 {
 }
 
 
 
 // smart pointers would be freaking sweet here
-ofxVCGCloud* ofxVCGLib::createCloudFromMesh(ofMesh* mesh)
+ofxVCGCloud* ofxVCG::createCloudFromMesh(ofMesh* mesh)
 {
 }
 
 
-ofMesh* ofxVCGLib::createMeshFromPoints(vector<ofVec3f> points, int degreeOfFidelity)
+ofMesh* ofxVCG::createMeshFromPoints(vector<ofVec3f> points, int degreeOfFidelity)
 {
 }
 
 
-ofMesh* ofxVCGLib::createMeshFromPoints(vector<ofVec2f> points, int degreeOfFidelity)
-{
-}
-
-
-
-ofxVCGCloud* ofxVCGLib::createCloudFromPoints(vector<ofVec2f> points)
+ofMesh* ofxVCG::createMeshFromPoints(vector<ofVec2f> points, int degreeOfFidelity)
 {
 }
 
 
 
-ofxVCGCloud* ofxVCGLib::createCloudFromPoints(vector<ofVec3f> points)
+ofxVCGCloud* ofxVCG::createCloudFromPoints(vector<ofVec2f> points)
+{
+}
+
+
+
+ofxVCGCloud* ofxVCG::createCloudFromPoints(vector<ofVec3f> points)
 {
 	
 	innerMesh m;
@@ -212,7 +233,7 @@ ofxVCGCloud* ofxVCGLib::createCloudFromPoints(vector<ofVec3f> points)
 	
 }
 
-void getFacesForRay(ofxVCGRay ray, ofMesh* mesh)
+void ofxVCG::getFacesForRay(ofxVCGRay ray, ofMesh* mesh)
 {
 	innerMesh m(mesh);
 	float t;
@@ -234,25 +255,25 @@ void getFacesForRay(ofxVCGRay ray, ofMesh* mesh)
 	
 }
 
-void ofxVCGLib::pointsToPlane(vector<ofVec2f> points)
+void ofxVCG::pointsToPlane(vector<ofVec2f> points)
 {
 }
 
 
 // don't really like the c-style-ness of this
-void ofxVCGLib::getNeighboringFaces(ofxMeshFace* face, ofMesh* mesh)
+void ofxVCG::getNeighboringFaces(ofxMeshFace* face, ofMesh* mesh)
 {
 }
 
-void ofxVCGLib::getFacesFromMesh(vector<ofxMeshFace>* faces, ofMesh* mesh){
+void ofxVCG::getFacesFromMesh(vector<ofxMeshFace>* faces, ofMesh* mesh){
 }
 
-void ofxVCGLib::constructMeshFromFaces(ofMesh* mesh, vector<ofxMeshFace>* faces){
+void ofxVCG::constructMeshFromFaces(ofMesh* mesh, vector<ofxMeshFace>* faces){
 }
 
 
 /*
-void ofxVCGLib::reconstructFaceBunny(float _radius, 
+void reconstructFaceBunny(float _radius, 
 									 float _clustering,
 									 float _angle) {
 	
@@ -283,7 +304,7 @@ void ofxVCGLib::reconstructFaceBunny(float _radius,
 
 }
 
-void ofxVCGLib::reconstructFacePointCloud(vector<float> point_cloud, 
+void reconstructFacePointCloud(vector<float> point_cloud, 
 										  float _radius, 
 										  float _clustering,
 										  float _angle) {
@@ -321,7 +342,7 @@ void ofxVCGLib::reconstructFacePointCloud(vector<float> point_cloud,
 	int test = 9;
 }
 
-bool ofxVCGLib::addFace() {
+bool addFace() {
 
 
 	for(int i =0; i < 100; i++) {
@@ -347,7 +368,7 @@ bool ofxVCGLib::addFace() {
 //	return true;
 }
 
-vector<float> ofxVCGLib::getVertices() {
+vector<float> getVertices() {
 	
 	vector<float> verts;
 	for (int i = 0; i < m.vert.size(); i++) {
@@ -359,7 +380,7 @@ vector<float> ofxVCGLib::getVertices() {
 	
 }
 
-vector<int> ofxVCGLib::getFaceIndices() {
+vector<int> getFaceIndices() {
 	
 	vector<int> faceIndices;
 	for (int i = 0; i < m.face.size(); i++) {
@@ -384,7 +405,7 @@ vector<int> ofxVCGLib::getFaceIndices() {
 	
 }
 
-int ofxVCGLib::getFaceNum() {
+int getFaceNum() {
 	
 	return m.face.size();
 	

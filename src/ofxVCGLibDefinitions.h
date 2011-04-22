@@ -23,6 +23,10 @@
 #include<vcg/complex/trimesh/base.h>
 #include <vcg/complex/trimesh/update/topology.h>
 #include <vcg/complex/trimesh/update/normal.h>
+#include<vcg/complex/trimesh/allocate.h>
+//#include<vcg/complex/trimesh/refine.h>
+#include<vcg/complex/trimesh/update/flag.h>
+
 
 // to clean up a mesh
 #include<vcg/complex/trimesh/clean.h>
@@ -46,10 +50,12 @@ class innerEdge;
 struct ofxVCGTypes:public UsedTypes<Use<ofxVCGVertex>::AsVertexType, Use<innerEdge>::AsEdgeType, Use<innerMeshFace>::AsFaceType>{};
 
 class ofxVCGVertex: 
-	public Vertex<ofxVCGTypes, vertex::Coord3f, vertex::Normal3f, vertex::BitFlags, vertex::Mark, vertex::VFAdj, vertex::Qualityf>  
+	public Vertex<ofxVCGTypes, vertex::Coord3f, vertex::BitFlags,vertex::Normal3f, vertex::Color4b>  
 {
 
 public:
+	
+	
 	
 	ofxVCGVertex() {}
 	
@@ -58,6 +64,7 @@ public:
 		P().X() = sourceVec3f.x;
 		P().Y() = sourceVec3f.y;
 		P().Z() = sourceVec3f.z;
+		
 	}
 	
 	void update(ofVec3f sourceVec3f)
@@ -67,11 +74,23 @@ public:
 		P().Z() = sourceVec3f.z;
 	}
 	
+	ofVec3f& toOf()
+	{
+		ofVec.x = P().X();
+		ofVec.y = P().Y();
+		ofVec.z = P().Z();
+		return ofVec;
+	}
+	
+private:
+	
+	ofVec3f ofVec;
+	
 };
 
 // used to store face info
 // only used in vcg->ofxMeshFace conversion
-class innerMeshFace:public Face<ofxVCGTypes, face::InfoOcf, face::FFAdjOcf,  face::VertexRef, face::BitFlags > {
+class innerMeshFace:public Face<ofxVCGTypes, face::FFAdj, face::VertexRef, face::BitFlags, face::Normal3f> {
 	
 };
 
@@ -80,30 +99,15 @@ class innerEdge:public Edge<ofxVCGTypes>{
 	
 };
 
-class innerMesh:public vcg::tri::TriMesh<vector<ofxVCGVertex>,vector<innerMeshFace> > {
-public:
+class innerMesh:public vcg::tri::TriMesh<vector<ofxVCGVertex>, vector<innerMeshFace> > {
+	
+	public:
+	
+	vector<int> mesh_indices;
 	
 	innerMesh() {}
 	
-	innerMesh(ofMesh* mesh) {
-		int i;
-		
-		/// whoa, this needs some thought
-		vector<ofVec3f>::iterator v_it = mesh->getVertices().begin();
-		while(v_it != mesh->getVertices().end()) {
-			ofxVCGVertex v(*v_it);
-			vert.push_back(v);
-			++v_it;
-		}
-		
-		// need these or let them get calc'd in vcg?
-		/*vector<ofVec3f>::iterator n_it = mesh->getNormals().begin();
-		while(n_it != mesh->getNormals().end()) {
-			ofxVCGVertex n(*n_it);
-			face.normals.push_back(n);
-			++n_it;
-		}*/
-	}
+	innerMesh(ofMesh* mesh);
 	
 	vector<float> getVertices() {
 		
@@ -117,23 +121,32 @@ public:
 		
 	}
 	
-	vector<int> getFaceIndices() {
-		
+	// this is hellishly slow :(
+	// 
+	vector<int> getFaceIndices() 
+	{	
 		vector<int> faceIndices;
-		for (int i = 0; i < face.size(); i++) {
-			for (int j = 0; j < 3; j++) {
-				for (int k = 0; k < vert.size(); k++) {
-					float xc = face[i].V(j)->P()[0];
-					float yc = face[i].V(j)->P()[1];
-					float zc = face[i].V(j)->P()[2];				
-					ofVec3f c(xc, yc, zc);
-					float xt = vert[k].P()[0];
-					float yt = vert[k].P()[1];
-					float zt = vert[k].P()[2];
-					ofVec3f t(xt, yt, zt);
-					if (c == t) {
-						faceIndices.push_back(k);
-						break;
+		for (int i = 0; i < face.size(); i++) 
+		{
+			for (int j = 0; j < 3; j++) 
+			{
+				for (int k = 0; k < vert.size(); k++) 
+				{
+					if(face[i].V(j))
+					{
+						float xc = face[i].V(j)->P()[0];
+						float yc = face[i].V(j)->P()[1];
+						float zc = face[i].V(j)->P()[2];				
+						ofVec3f c(xc, yc, zc);
+						float xt = vert[k].P()[0];
+						float yt = vert[k].P()[1];
+						float zt = vert[k].P()[2];
+						ofVec3f t(xt, yt, zt);
+						if (c == t) 
+						{
+							faceIndices.push_back(k);
+							break;
+						}
 					}
 				}
 			}
