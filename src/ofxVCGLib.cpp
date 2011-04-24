@@ -19,6 +19,7 @@ ofMesh* ofxVCG::createMeshFromCloud(ofxVCGCloud* cloud)
 
 	// up to you to manage this one, but this really should be a smart ptr
 	ofMesh* mesh = new ofMesh();
+	return mesh;
 	
 }
 
@@ -38,6 +39,7 @@ void ofxVCG::cleanMesh(ofMesh* mesh)
 	UpdateFlags<innerMesh>::FaceProjection(m);
 	
 	// copy back
+	vcgMeshToOf(&m, mesh);
 }
 
 // make this read in files too
@@ -143,6 +145,12 @@ ofMesh* ofxVCG::joinMeshes( ofMesh* toBeParent, ofMesh* toBeChild )
 	
 	tri::Append<innerMesh,innerMesh>::Mesh(mP,mC); // join them
 	tri::Clean<innerMesh>::RemoveDuplicateVertex(mP); // now clean it up 
+	
+	ofMesh* mesh = new ofMesh();
+	
+	vcgMeshToOf(&mP, mesh);
+	
+	return mesh;
 	
 }
 

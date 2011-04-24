@@ -27,6 +27,15 @@
 //#include<vcg/complex/trimesh/refine.h>
 #include<vcg/complex/trimesh/update/flag.h>
 
+#include<vcg/complex/trimesh/update/selection.h>
+
+// topology computation
+#include<vcg/complex/trimesh/update/topology.h>
+#include <vcg/complex/trimesh/update/flag.h>
+#include <vcg/complex/trimesh/update/normal.h>
+
+// half edge iterators
+#include<vcg/simplex/face/pos.h>
 
 // to clean up a mesh
 #include<vcg/complex/trimesh/clean.h>
@@ -50,17 +59,21 @@ class innerEdge;
 struct ofxVCGTypes:public UsedTypes<Use<ofxVCGVertex>::AsVertexType, Use<innerEdge>::AsEdgeType, Use<innerMeshFace>::AsFaceType>{};
 
 class ofxVCGVertex: 
-	public Vertex<ofxVCGTypes, vertex::Coord3f, vertex::BitFlags,vertex::Normal3f, vertex::Color4b>  
+public Vertex<ofxVCGTypes, vertex::Coord3f, vertex::BitFlags,vertex::Normal3f, vertex::Mark, vertex::Color4b>  
 {
 
 public:
 	
+	ofxVCGVertex() {
 	
-	
-	ofxVCGVertex() {}
+		InitIMark(); // do this so that it keeps track of its index
+	}
 	
 	ofxVCGVertex(ofVec3f sourceVec3f)
 	{
+		
+		InitIMark(); // do this so that it keeps track of its index
+		
 		P().X() = sourceVec3f.x;
 		P().Y() = sourceVec3f.y;
 		P().Z() = sourceVec3f.z;
@@ -90,7 +103,22 @@ private:
 
 // used to store face info
 // only used in vcg->ofxMeshFace conversion
-class innerMeshFace:public Face<ofxVCGTypes, face::FFAdj, face::VertexRef, face::BitFlags, face::Normal3f> {
+class innerMeshFace:public Face<ofxVCGTypes, face::FFAdj, face::Mark, face::VertexRef, face::BitFlags, face::Normal3f> {
+
+public:
+	int ind0, ind1, ind2;
+	
+	/*innerMeshFace(const innerMeshFace &copy) {
+		ind0 = copy.ind0;
+		ind1 = copy.ind1;
+		ind2 = copy.ind2;
+		
+		
+	}
+	
+	innerMesh& operator=( const innerMesh& rhs ) {
+	}*/
+
 	
 };
 
@@ -121,39 +149,7 @@ class innerMesh:public vcg::tri::TriMesh<vector<ofxVCGVertex>, vector<innerMeshF
 		
 	}
 	
-	// this is hellishly slow :(
-	// 
-	vector<int> getFaceIndices() 
-	{	
-		vector<int> faceIndices;
-		for (int i = 0; i < face.size(); i++) 
-		{
-			for (int j = 0; j < 3; j++) 
-			{
-				for (int k = 0; k < vert.size(); k++) 
-				{
-					if(face[i].V(j))
-					{
-						float xc = face[i].V(j)->P()[0];
-						float yc = face[i].V(j)->P()[1];
-						float zc = face[i].V(j)->P()[2];				
-						ofVec3f c(xc, yc, zc);
-						float xt = vert[k].P()[0];
-						float yt = vert[k].P()[1];
-						float zt = vert[k].P()[2];
-						ofVec3f t(xt, yt, zt);
-						if (c == t) 
-						{
-							faceIndices.push_back(k);
-							break;
-						}
-					}
-				}
-			}
-		}
-		return faceIndices;
-		
-	}
+	vector<int> getFaceIndices();
 	
 
 };
