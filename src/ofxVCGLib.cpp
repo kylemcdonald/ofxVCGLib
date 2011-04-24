@@ -143,6 +143,8 @@ ofMesh* ofxVCG::joinMeshes( ofMesh* toBeParent, ofMesh* toBeChild )
 	innerMesh mP(toBeParent);
 	innerMesh mC(toBeChild);
 	
+	
+	
 	tri::Append<innerMesh,innerMesh>::Mesh(mP,mC); // join them
 	tri::Clean<innerMesh>::RemoveDuplicateVertex(mP); // now clean it up 
 	

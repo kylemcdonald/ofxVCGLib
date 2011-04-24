@@ -88,7 +88,7 @@ innerMesh::innerMesh(ofMesh* mesh)
 vector<int> innerMesh::getFaceIndices() 
 {	
 	vector<int> faceIndices;
-	for (int i = 0; i < face.size(); i++) 
+	/*for (int i = 0; i < face.size(); i++) 
 	 {
 		 for (int j = 0; j < 3; j++) 
 		 {
@@ -112,30 +112,23 @@ vector<int> innerMesh::getFaceIndices()
 				 }
 			 }
 		 }
-	 }
-	
-	
-	/*innerMesh::PerFaceAttributeHandle<Point3i> indicesHandle = Allocator<innerMesh>::GetPerFaceAttribute<Point3i>(*this,"MeshIndices"); 
-	
-	innerMesh::FaceIterator fi;
-	for(fi = face.begin(); fi!=face.end(); ++fi ) 
+	 }*/
+
+
+	FaceIterator fi;
+	for(fi = face.begin(); fi != face.end(); ++fi)
 	{
 		
-		cout << indicesHandle[fi][0] << " " << indicesHandle[fi][1] <<  " " << indicesHandle[fi][2] << endl;			
+		int v0 = (unsigned int)( (*fi).V(0) - &(*this->vert.begin() ));
+		int v1 = (unsigned int)( (*fi).V(1) - &(*this->vert.begin() ));
+		int v2 = (unsigned int)( (*fi).V(2) - &(*this->vert.begin() ));
+																					  
+		cout << v0 <<  " " << v1 << " " << v2 << endl;
 		
-		if(indicesHandle[fi][0] < vert.size() && indicesHandle[fi][0] > -1)
-		{
-			faceIndices.push_back(indicesHandle[fi][0]);
-		}
-		if(indicesHandle[fi][1] < vert.size() && indicesHandle[fi][1] > -1)
-		{
-			faceIndices.push_back(indicesHandle[fi][1]);
-		}
-		if(indicesHandle[fi][2] < vert.size() && indicesHandle[fi][2] > -1)
-		{
-			faceIndices.push_back(indicesHandle[fi][2]);
-		}
-	}*/
+		if(v0 < vert.size() && v0 > -1) faceIndices.push_back(v0);
+		if(v1 < vert.size() && v1 > -1) faceIndices.push_back(v1);
+		if(v2 < vert.size() && v2 > -1) faceIndices.push_back(v2);
+	}
 	
 	return faceIndices;
 	
