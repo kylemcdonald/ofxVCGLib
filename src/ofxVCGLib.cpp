@@ -14,15 +14,6 @@ ofMesh* ofxVCG::intersectMeshes(vector<ofMesh> meshes)
 	//tri::Append<MyMesh,MyMesh>::Mesh(ml,mr);
 }
 
-ofMesh* ofxVCG::createMeshFromCloud(ofxVCGCloud* cloud)
-{
-
-	// up to you to manage this one, but this really should be a smart ptr
-	ofMesh* mesh = new ofMesh();
-	return mesh;
-	
-}
-
 void ofxVCG::cleanMesh(ofMesh* mesh)
 {
 	
@@ -143,8 +134,6 @@ ofMesh* ofxVCG::joinMeshes( ofMesh* toBeParent, ofMesh* toBeChild )
 	innerMesh mP(toBeParent);
 	innerMesh mC(toBeChild);
 	
-	
-	
 	tri::Append<innerMesh,innerMesh>::Mesh(mP,mC); // join them
 	tri::Clean<innerMesh>::RemoveDuplicateVertex(mP); // now clean it up 
 	
@@ -186,64 +175,132 @@ bool ofxVCG::nodeIntersection(ofNode* aNode, ofNode* bNode)
 
 
 // smart pointers would be freaking sweet here
-ofxVCGCloud* ofxVCG::createCloudFromMesh(ofMesh* mesh)
+
+ofMesh* ofxVCG::createMeshFromPoints(vector<ofVec3f> points, int degreeOfFidelity, meshConstructionAlgo useMeshConstructionAlgo = BALL_PIVOT_CONSTRUCTION)
 {
+	
+	innerMesh m;	
+	
+	if(useMeshConstructionAlgo == BALL_PIVOT_CONSTRUCTION)
+	{
+		
+		Allocator<innerMesh>::AddVertices(m, points.size());
+	
+		
+		const int sz = points.size();
+		innerMesh::VertexIterator vi = m.vert.begin();
+		vector<ofVec3f>::iterator pit = points.begin();
+		while(pit != points.end())
+		{	
+			(*vi).update( *pit ); 
+			++vi;
+			++pit;
+		}
+		
+		
+		vcg::tri::UpdateBounding<innerMesh>::Box(m);
+		vcg::tri::UpdateNormals<innerMesh>::PerFace(m);
+		
+		tri::BallPivoting<innerMesh>* pivot = new tri::BallPivoting<innerMesh>(m); 	
+		pivot->BuildMesh();
+		
+		NormalExtrapolation<vector<ofxVCGVertex> >::ExtrapolateNormals(m.vert.begin(), m.vert.end(), 2);
+	}
+	else
+	{
+		/*ofxVolume volume;
+		volume.Init(points/3);
+		
+		vector<float>::iterator pit = points.begin();
+		while(pit != points.end())
+		{	
+			volume.Val(*pit, ++pit, ++pit); 
+			++pit;
+		}
+		
+		
+		vcg::tri::TrivialWalker<innerMesh,ofxVolume> walker;
+		vcg::tri::MarchingCubes<innerMesh, TrivialWalker<innerMesh, ofxVolume> > marchingCubes;
+		
+		MyMarchingCubes	mc(m, walker);
+		walker.BuildMesh<MyMarchingCubes>(m, volume, marchingCubes, 20*20);*/
+		
+	}
+	ofMesh* ofm = new ofMesh();
+	
+	vcgMeshToOf(&m, ofm);
+	
+	return ofm;
+	
 }
 
 
-ofMesh* ofxVCG::createMeshFromPoints(vector<ofVec3f> points, int degreeOfFidelity)
-{
-}
-
-
-ofMesh* ofxVCG::createMeshFromPoints(vector<ofVec2f> points, int degreeOfFidelity)
-{
-}
-
-
-
-ofxVCGCloud* ofxVCG::createCloudFromPoints(vector<ofVec2f> points)
-{
-}
-
-
-
-ofxVCGCloud* ofxVCG::createCloudFromPoints(vector<ofVec3f> points)
+ofMesh* ofxVCG::createMeshFromPoints(vector<float> points, int degreeOfFidelity, meshConstructionAlgo useMeshConstructionAlgo = BALL_PIVOT_CONSTRUCTION)
 {
 	
 	innerMesh m;
 	
-	m.face.clear();
-	m.fn = 0;	
-	m.Clear();
-	
-	vector<ofVec3f>::iterator pIt = points.begin();
-	while (pIt != points.end()) {
-		ofxVCGVertex mv;
-		mv.P() = Point3f(pIt->x,pIt->y,pIt->z);
-		m.vert.push_back(mv);
-		m.vn++;
+	if(useMeshConstructionAlgo == BALL_PIVOT_CONSTRUCTION)
+	{
 		
-		++pIt;
+		
+		Allocator<innerMesh>::AddVertices(m, points.size()/3);
+		
+		
+		const int sz = points.size();
+		innerMesh::VertexIterator vi = m.vert.begin();
+		vector<float>::iterator pit = points.begin();
+		while(pit != points.end())
+		{	
+			(*vi).P().X() = *pit; 
+			(*vi).P().Y() = *(++pit);
+			(*vi).P().Z() = *(++pit);
+			++vi;
+			++pit;
+		}
+		
+		
+		vcg::tri::UpdateBounding<innerMesh>::Box(m);
+		vcg::tri::UpdateNormals<innerMesh>::PerFace(m);
+		
+		tri::BallPivoting<innerMesh>* pivot = new tri::BallPivoting<innerMesh>(m); 	
+		pivot->BuildMesh();
+		
+		NormalExtrapolation<vector<ofxVCGVertex> >::ExtrapolateNormals(m.vert.begin(), m.vert.end(), 2);
+
+	}
+	else
+	{
+		
+		/*ofxVolume volume;
+		volume.Init(points/3);
+		
+		vector<float>::iterator pit = points.begin();
+		while(pit != points.end())
+		{	
+			volume.Val(*pit, ++pit, ++pit); 
+			++pit;
+		}
+		
+		
+		vcg::tri::TrivialWalker<innerMesh,ofxVolume> walker;
+		vcg::tri::MarchingCubes<innerMesh, TrivialWalker<innerMesh, ofxVolume> > marchingCubes;
+		
+		MyMarchingCubes	mc(m, walker);
+		walker.BuildMesh<MyMarchingCubes>(m, volume, marchingCubes, 20*20);*/
+		
 	}
 	
-	vcg::tri::UpdateBounding<innerMesh>::Box(m);
-	vcg::tri::UpdateNormals<innerMesh>::PerFace(m);	
+	ofMesh* ofm = new ofMesh();
 	
-	/*
-	legacyPivot = NULL;
-	if (legacyPivot) delete legacyPivot;
-	legacyPivot = new tri::BallPivoting<innerMesh>(m, _radius, _clustering, _angle); 	
-	legacyPivot->BuildMesh();
+	vcgMeshToOf(&m, ofm);
 	
-	NormalExtrapolation<vector<CVertex> >::ExtrapolateNormals(m.vert.begin(), m.vert.end(), 2);	
-	
-	pivot = new tri::ofxVCGPivot<CMesh>(m, _radius, _clustering, _angle);
-	*/
+	return ofm;
 	
 }
 
-void ofxVCG::getFacesForRay(ofxVCGRay ray, ofMesh* mesh)
+
+vcgRayMeshIntersection ofxVCG::getFacesForRay(ofxVCGRay ray, ofMesh* mesh)
 {
 	innerMesh m(mesh);
 	float t;
@@ -260,9 +317,31 @@ void ofxVCG::getFacesForRay(ofxVCGRay ray, ofMesh* mesh)
 	vcg_ray.SetOrigin(beg);
 	vcg_ray.SetDirection(dir);
 	
-	// now actually find the face
-	innerMeshFace *rf = tri::DoRay<innerMesh,innerMeshGrid>(m, grid, vcg_ray, maxDist, t);
+	// get the baricentric points of the intersection
+	// plus the face intersected plus the point where they meet
+	innerMesh::FacePointer intersectedFace;
+	innerMesh::ScalarType bc1, bc2, bc3;
+	Point3f hitPoint;
 	
+	Line3f line;
+	
+	IntersectionRayMesh(&m, line, hitPoint, bc1, bc2, bc3, intersectedFace);
+	
+	// now set the intersection data so we have it on the other side
+	vcgRayMeshIntersection intersectionData;
+	
+	intersectionData.baricentricCenter.x = bc1;
+	intersectionData.baricentricCenter.y = bc2;
+	intersectionData.baricentricCenter.z = bc3;
+	
+	ofxMeshFace face(intersectedFace);
+	intersectionData.intersectedFace = face;
+	
+	intersectionData.hitPoint.x = hitPoint.X();
+	intersectionData.hitPoint.y = hitPoint.Y();
+	intersectionData.hitPoint.z = hitPoint.Z();
+	
+	return intersectionData;
 }
 
 void ofxVCG::pointsToPlane(vector<ofVec2f> points)

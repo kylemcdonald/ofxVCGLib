@@ -38,8 +38,7 @@ innerMesh::innerMesh(ofMesh* mesh)
 		++inVit;
 		++vi;
 	}
-	
-	innerMesh::PerFaceAttributeHandle<Point3i> meshIndicesHandle = Allocator<innerMesh>::AddPerFaceAttribute<Point3i> (*this, string("MeshIndices"));
+
 	
 	//// get all the faces
 	FaceIterator fi = face.begin();
@@ -49,19 +48,16 @@ innerMesh::innerMesh(ofMesh* mesh)
 		(*fi).V(0) = &vert[(unsigned int) (*indPtr)];
 		if(indPtr != mesh->getIndices().end())
 		{
-			meshIndicesHandle[fi][0] = *indPtr;
 			++indPtr;
 		}
 		if(indPtr != mesh->getIndices().end())
 		{
 			(*fi).V(1) = &vert[(unsigned int) (*indPtr)];
-			meshIndicesHandle[fi][1] = *indPtr;
 			++indPtr;
 		}
 		if(indPtr != mesh->getIndices().end())
 		{
 			(*fi).V(2) = &vert[(unsigned int) (*indPtr)];
-			meshIndicesHandle[fi][2] = *indPtr;
 			++indPtr;
 		}
 		++fi;

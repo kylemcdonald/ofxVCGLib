@@ -41,12 +41,18 @@
 #include<vcg/complex/trimesh/clean.h>
 #include<vcg/complex/trimesh/smooth.h>
 
+// to make vertex meshes (i.e no faces)
+#include<vcg/complex/vertexmesh/base.h>
+#include<vcg/complex/vertexmesh/allocate.h>
+
+
 #include "ofxVCGCloud.h"
-#include "ofxVCGVoxel.h"
+//#include "ofxVCGVolume.h"
 
 #define __FLT_EVAL_METHOD__ 0
 
 using namespace vcg;
+
 
 
 // base types
@@ -59,7 +65,7 @@ class innerEdge;
 struct ofxVCGTypes:public UsedTypes<Use<ofxVCGVertex>::AsVertexType, Use<innerEdge>::AsEdgeType, Use<innerMeshFace>::AsFaceType>{};
 
 class ofxVCGVertex: 
-public Vertex<ofxVCGTypes, vertex::Coord3f, vertex::BitFlags,vertex::Normal3f, vertex::Mark, vertex::Color4b>  
+public Vertex<ofxVCGTypes, vertex::Coord3f, vertex::BitFlags, vertex::Normal3f, vertex::Mark, vertex::Color4b, vertex::VFAdj>  
 {
 
 public:
@@ -95,6 +101,14 @@ public:
 		return ofVec;
 	}
 	
+	ofVec3f& normalToOf()
+	{
+		ofVec.x = N().X();
+		ofVec.y = N().Y();
+		ofVec.z = N().Z();
+		return ofVec;
+	}
+	
 private:
 	
 	ofVec3f ofVec;
@@ -104,21 +118,6 @@ private:
 // used to store face info
 // only used in vcg->ofxMeshFace conversion
 class innerMeshFace:public Face<ofxVCGTypes, face::FFAdj, face::Mark, face::VertexRef, face::BitFlags, face::Normal3f> {
-
-public:
-	int ind0, ind1, ind2;
-	
-	/*innerMeshFace(const innerMeshFace &copy) {
-		ind0 = copy.ind0;
-		ind1 = copy.ind1;
-		ind2 = copy.ind2;
-		
-		
-	}
-	
-	innerMesh& operator=( const innerMesh& rhs ) {
-	}*/
-
 	
 };
 
@@ -161,8 +160,14 @@ public:
 	
 };
 
+// to be implemented
+class ofxVCGMesh : public vrt::VertexMesh< vector<ofxVCGVertex> > {
+};
+
 // other typedefs
 
-typedef SimpleVolume<SimpleVoxel> ofxVCGVolume;
+//typedef SimpleVolume<SimpleVoxel> ofxVCGVolume;
+//typedef ofxVCGVolume<SimpleVoxel> ofxVolume;
+
 typedef vcg::GridStaticPtr<innerMesh::FaceType, innerMesh::ScalarType> innerMeshGrid;
 
