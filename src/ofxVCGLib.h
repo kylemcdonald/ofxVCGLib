@@ -76,6 +76,8 @@ namespace ofxVCG {
 	// smart pointers would be freaking sweet here
 	ofMesh* createMeshFromPoints(vector<ofVec3f> points, int degreeOfFidelity, meshConstructionAlgo useMeshConstructionAlgo);
 	ofMesh* createMeshFromPoints(vector<float> points, int degreeOfFidelity, meshConstructionAlgo useMeshConstructionAlgo);
+	
+	void cleanCloudPoints(vector<ofVec3f> *in, vector<ofVec3f> *out, float radius);
 
 	void pointsToPlane(vector<ofVec2f> points);
 	void cleanMesh(ofMesh* mesh);

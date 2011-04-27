@@ -45,6 +45,8 @@
 #include<vcg/complex/vertexmesh/base.h>
 #include<vcg/complex/vertexmesh/allocate.h>
 
+// still no refine wtf
+//#include<vcg/complex/trimesh/refine.h>
 
 #include "ofxVCGCloud.h"
 //#include "ofxVCGVolume.h"

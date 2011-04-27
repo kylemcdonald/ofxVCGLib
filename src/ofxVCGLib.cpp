@@ -361,6 +361,59 @@ void ofxVCG::constructMeshFromFaces(ofMesh* mesh, vector<ofxMeshFace>* faces){
 }
 
 
+void ofxVCG::cleanCloudPoints(vector<ofVec3f> *in, vector<ofVec3f> *out, float radius) {
+	
+	innerMesh m;
+	cout << in->size() << endl;
+	Allocator<innerMesh>::AddVertices(m, in->size());
+	
+	innerMesh::VertexIterator vi = m.vert.begin();
+	vector<ofVec3f>::iterator pit = in->begin();
+	while(pit != in->end()) // go through all points, add them
+	{	
+		(*vi).update( *pit ); 
+		++vi;
+		++pit;
+	}
+	
+	vcg::tri::UpdateBounding<innerMesh>::Box(m);
+	vcg::tri::UpdateNormals<innerMesh>::PerFace(m);
+	
+	tri::BallPivoting<innerMesh>* pivot = new tri::BallPivoting<innerMesh>(m); 	
+	pivot->BuildMesh();
+	
+	// now clean the mesh
+	int dupdV = tri::Clean<innerMesh>::RemoveDuplicateVertex(m); // any dup'd vertices
+	int mergeClose = tri::Clean<innerMesh>::MergeCloseVertex(m, radius); // merge any close vertices
+	int degenV = tri::Clean<innerMesh>::RemoveDegenerateVertex(m);
+	
+	int degenF = tri::Clean<innerMesh>::RemoveDegenerateFace(m); // lame-faces goodbye
+	int unref = tri::Clean<innerMesh>::RemoveUnreferencedVertex(m); // now any vertices
+	
+	cout << " removed " << dupdV << " duplicate vertices " << endl;
+	cout << " merged " << mergeClose << " close vertices " << endl;
+	cout << " removed " << degenF << " degenerate faces " << endl;
+	cout << " removed " << degenV << " degenerate vertices " << endl;
+	cout << " removed " << unref << " unreferenced vertices " << endl;
+	
+	// Rebuild topology
+	tri::UpdateTopology<innerMesh>::FaceFace(m);
+	tri::UpdateTopology<innerMesh>::VertexFace(m);
+	
+	vi = m.vert.begin();
+	while(vi != m.vert.end())
+	{
+		if(!vi->IsD())
+		{
+			out->push_back( (*vi).toOf() ); // turn to ofVec3f
+		}
+		++vi;
+	}
+	
+	cout << " mesh has " << m.vn << " vertices and " << m.fn << " faces while the cloud has " << out->size() << " vec3f " << endl;
+	
+}
+
 /*
 void reconstructFaceBunny(float _radius, 
 									 float _clustering,
