@@ -1,0 +1,2002 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Administrador</author>
+      <authoring_tool>3dsMax 9 - Feeling ColladaMax v3.04C.</authoring_tool>
+      <comments>ColladaMax Export Options: ExportNormals=1;ExportEPolyAsTriangles=0;ExportXRefs=0;ExportSelected=1;ExportTangents=0;ExportAnimations=0;SampleAnim=0;ExportAnimClip=0;BakeMatrices=0;ExportRelativePaths=1;AnimStart=0;AnimEnd=16000;</comments>
+      <source_data>file:///C:/Documents%20and%20Settings/Administrador/Escritorio/Foot%20ball/footballmio.max</source_data>
+    </contributor>
+    <created>2009-01-29T01:41:38Z</created>
+    <modified>2009-01-29T01:41:45Z</modified>
+    <unit meter="0.0254" name="inch"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_materials>
+    <material id="negro" name="negro">
+      <instance_effect url="#negro-fx"/>
+    </material>
+    <material id="blanco" name="blanco">
+      <instance_effect url="#blanco-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="negro-fx" name="negro">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <ambient>
+              <color>0.011764 0.011764 0.011764 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.011764 0.011764 0.011764 1</color>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0.415939</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>1</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+            <index_of_refraction>
+              <float>1</float>
+            </index_of_refraction>
+          </blinn>
+          <extra>
+            <technique profile="FCOLLADA">
+              <spec_level>
+                <float>0</float>
+              </spec_level>
+              <emission_level>
+                <float>0</float>
+              </emission_level>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>1</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="blanco-fx" name="blanco">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <ambient>
+              <color>1 1 1 1</color>
+            </ambient>
+            <diffuse>
+              <color>1 1 1 1</color>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0.415939</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>1</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+            <index_of_refraction>
+              <float>1</float>
+            </index_of_refraction>
+          </blinn>
+          <extra>
+            <technique profile="FCOLLADA">
+              <spec_level>
+                <float>0</float>
+              </spec_level>
+              <emission_level>
+                <float>0</float>
+              </emission_level>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>1</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="NGon01-mesh" name="NGon01">
+      <mesh>
+        <source id="NGon01-mesh-positions">
+          <float_array id="NGon01-mesh-positions-array" count="15">85.065 0 0 26.2865 80.9016 0 -68.819 49.9999 0 -68.819 -49.9999 0 26.2865 -80.9016 0</float_array>
+          <technique_common>
+            <accessor source="#NGon01-mesh-positions-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon01-mesh-normals">
+          <float_array id="NGon01-mesh-normals-array" count="15">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon01-mesh-normals-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon01-mesh-map-channel1">
+          <float_array id="NGon01-mesh-map-channel1-array" count="15">0.999501 0.5 0.5 0.617916 0.999501 0.5 0.000499 0.808708 0.5 0.000499 0.191292 0.5 0.617916 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon01-mesh-map-channel1-array" count="5" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon01-mesh-vertices">
+          <input semantic="POSITION" source="#NGon01-mesh-positions"/>
+        </vertices>
+        <triangles material="negro" count="3">
+          <input semantic="VERTEX" source="#NGon01-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon01-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon01-mesh-map-channel1" offset="2" set="1"/>
+          <p>2 0 2 3 1 3 4 2 4 1 3 1 2 0 2 4 2 4 0 4 0 1 3 1 4 2 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon07-mesh" name="NGon07">
+      <mesh>
+        <source id="NGon07-mesh-positions">
+          <float_array id="NGon07-mesh-positions-array" count="15">85.065 0 0 26.2865 80.9016 0 -68.819 49.9999 0 -68.819 -49.9999 0 26.2865 -80.9016 0</float_array>
+          <technique_common>
+            <accessor source="#NGon07-mesh-positions-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon07-mesh-normals">
+          <float_array id="NGon07-mesh-normals-array" count="15">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon07-mesh-normals-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon07-mesh-map-channel1">
+          <float_array id="NGon07-mesh-map-channel1-array" count="15">0.999501 0.5 0.5 0.617916 0.999501 0.5 0.000499 0.808708 0.5 0.000499 0.191292 0.5 0.617916 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon07-mesh-map-channel1-array" count="5" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon07-mesh-vertices">
+          <input semantic="POSITION" source="#NGon07-mesh-positions"/>
+        </vertices>
+        <triangles material="negro" count="3">
+          <input semantic="VERTEX" source="#NGon07-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon07-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon07-mesh-map-channel1" offset="2" set="1"/>
+          <p>2 0 2 3 1 3 4 2 4 1 3 1 2 0 2 4 2 4 0 4 0 1 3 1 4 2 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon08-mesh" name="NGon08">
+      <mesh>
+        <source id="NGon08-mesh-positions">
+          <float_array id="NGon08-mesh-positions-array" count="15">85.065 0 0 26.2865 80.9016 0 -68.819 49.9999 0 -68.819 -49.9999 0 26.2865 -80.9016 0</float_array>
+          <technique_common>
+            <accessor source="#NGon08-mesh-positions-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon08-mesh-normals">
+          <float_array id="NGon08-mesh-normals-array" count="15">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon08-mesh-normals-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon08-mesh-map-channel1">
+          <float_array id="NGon08-mesh-map-channel1-array" count="15">0.999501 0.5 0.5 0.617916 0.999501 0.5 0.000499 0.808708 0.5 0.000499 0.191292 0.5 0.617916 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon08-mesh-map-channel1-array" count="5" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon08-mesh-vertices">
+          <input semantic="POSITION" source="#NGon08-mesh-positions"/>
+        </vertices>
+        <triangles material="negro" count="3">
+          <input semantic="VERTEX" source="#NGon08-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon08-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon08-mesh-map-channel1" offset="2" set="1"/>
+          <p>2 0 2 3 1 3 4 2 4 1 3 1 2 0 2 4 2 4 0 4 0 1 3 1 4 2 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon27-mesh" name="NGon27">
+      <mesh>
+        <source id="NGon27-mesh-positions">
+          <float_array id="NGon27-mesh-positions-array" count="15">85.065 0 0 26.2865 80.9016 0 -68.819 49.9999 0 -68.819 -49.9999 0 26.2865 -80.9016 0</float_array>
+          <technique_common>
+            <accessor source="#NGon27-mesh-positions-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon27-mesh-normals">
+          <float_array id="NGon27-mesh-normals-array" count="15">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon27-mesh-normals-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon27-mesh-map-channel1">
+          <float_array id="NGon27-mesh-map-channel1-array" count="15">0.999501 0.5 0.5 0.617916 0.999501 0.5 0.000499 0.808708 0.5 0.000499 0.191292 0.5 0.617916 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon27-mesh-map-channel1-array" count="5" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon27-mesh-vertices">
+          <input semantic="POSITION" source="#NGon27-mesh-positions"/>
+        </vertices>
+        <triangles material="negro" count="3">
+          <input semantic="VERTEX" source="#NGon27-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon27-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon27-mesh-map-channel1" offset="2" set="1"/>
+          <p>2 0 2 3 1 3 4 2 4 1 3 1 2 0 2 4 2 4 0 4 0 1 3 1 4 2 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon10-mesh" name="NGon10">
+      <mesh>
+        <source id="NGon10-mesh-positions">
+          <float_array id="NGon10-mesh-positions-array" count="15">85.065 0 0 26.2865 80.9016 0 -68.819 49.9999 0 -68.819 -49.9999 0 26.2865 -80.9016 0</float_array>
+          <technique_common>
+            <accessor source="#NGon10-mesh-positions-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon10-mesh-normals">
+          <float_array id="NGon10-mesh-normals-array" count="15">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon10-mesh-normals-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon10-mesh-map-channel1">
+          <float_array id="NGon10-mesh-map-channel1-array" count="15">0.999501 0.5 0.5 0.617916 0.999501 0.5 0.000499 0.808708 0.5 0.000499 0.191292 0.5 0.617916 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon10-mesh-map-channel1-array" count="5" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon10-mesh-vertices">
+          <input semantic="POSITION" source="#NGon10-mesh-positions"/>
+        </vertices>
+        <triangles material="negro" count="3">
+          <input semantic="VERTEX" source="#NGon10-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon10-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon10-mesh-map-channel1" offset="2" set="1"/>
+          <p>2 0 2 3 1 3 4 2 4 1 3 1 2 0 2 4 2 4 0 4 0 1 3 1 4 2 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon26-mesh" name="NGon26">
+      <mesh>
+        <source id="NGon26-mesh-positions">
+          <float_array id="NGon26-mesh-positions-array" count="15">85.065 0 0 26.2865 80.9016 0 -68.819 49.9999 0 -68.819 -49.9999 0 26.2865 -80.9016 0</float_array>
+          <technique_common>
+            <accessor source="#NGon26-mesh-positions-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon26-mesh-normals">
+          <float_array id="NGon26-mesh-normals-array" count="15">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon26-mesh-normals-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon26-mesh-map-channel1">
+          <float_array id="NGon26-mesh-map-channel1-array" count="15">0.999501 0.5 0.5 0.617916 0.999501 0.5 0.000499 0.808708 0.5 0.000499 0.191292 0.5 0.617916 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon26-mesh-map-channel1-array" count="5" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon26-mesh-vertices">
+          <input semantic="POSITION" source="#NGon26-mesh-positions"/>
+        </vertices>
+        <triangles material="negro" count="3">
+          <input semantic="VERTEX" source="#NGon26-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon26-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon26-mesh-map-channel1" offset="2" set="1"/>
+          <p>2 0 2 3 1 3 4 2 4 1 3 1 2 0 2 4 2 4 0 4 0 1 3 1 4 2 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon24-mesh" name="NGon24">
+      <mesh>
+        <source id="NGon24-mesh-positions">
+          <float_array id="NGon24-mesh-positions-array" count="15">85.065 0 0 26.2865 80.9016 0 -68.819 49.9999 0 -68.819 -49.9999 0 26.2865 -80.9016 0</float_array>
+          <technique_common>
+            <accessor source="#NGon24-mesh-positions-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon24-mesh-normals">
+          <float_array id="NGon24-mesh-normals-array" count="15">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon24-mesh-normals-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon24-mesh-map-channel1">
+          <float_array id="NGon24-mesh-map-channel1-array" count="15">0.999501 0.5 0.5 0.617916 0.999501 0.5 0.000499 0.808708 0.5 0.000499 0.191292 0.5 0.617916 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon24-mesh-map-channel1-array" count="5" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon24-mesh-vertices">
+          <input semantic="POSITION" source="#NGon24-mesh-positions"/>
+        </vertices>
+        <triangles material="negro" count="3">
+          <input semantic="VERTEX" source="#NGon24-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon24-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon24-mesh-map-channel1" offset="2" set="1"/>
+          <p>2 0 2 3 1 3 4 2 4 1 3 1 2 0 2 4 2 4 0 4 0 1 3 1 4 2 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon23-mesh" name="NGon23">
+      <mesh>
+        <source id="NGon23-mesh-positions">
+          <float_array id="NGon23-mesh-positions-array" count="15">85.065 0 0 26.2865 80.9016 0 -68.819 49.9999 0 -68.819 -49.9999 0 26.2865 -80.9016 0</float_array>
+          <technique_common>
+            <accessor source="#NGon23-mesh-positions-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon23-mesh-normals">
+          <float_array id="NGon23-mesh-normals-array" count="15">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon23-mesh-normals-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon23-mesh-map-channel1">
+          <float_array id="NGon23-mesh-map-channel1-array" count="15">0.999501 0.5 0.5 0.617916 0.999501 0.5 0.000499 0.808708 0.5 0.000499 0.191292 0.5 0.617916 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon23-mesh-map-channel1-array" count="5" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon23-mesh-vertices">
+          <input semantic="POSITION" source="#NGon23-mesh-positions"/>
+        </vertices>
+        <triangles material="negro" count="3">
+          <input semantic="VERTEX" source="#NGon23-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon23-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon23-mesh-map-channel1" offset="2" set="1"/>
+          <p>2 0 2 3 1 3 4 2 4 1 3 1 2 0 2 4 2 4 0 4 0 1 3 1 4 2 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon09-mesh" name="NGon09">
+      <mesh>
+        <source id="NGon09-mesh-positions">
+          <float_array id="NGon09-mesh-positions-array" count="15">85.065 0 0 26.2865 80.9016 0 -68.819 49.9999 0 -68.819 -49.9999 0 26.2865 -80.9016 0</float_array>
+          <technique_common>
+            <accessor source="#NGon09-mesh-positions-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon09-mesh-normals">
+          <float_array id="NGon09-mesh-normals-array" count="15">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon09-mesh-normals-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon09-mesh-map-channel1">
+          <float_array id="NGon09-mesh-map-channel1-array" count="15">0.999501 0.5 0.5 0.617916 0.999501 0.5 0.000499 0.808708 0.5 0.000499 0.191292 0.5 0.617916 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon09-mesh-map-channel1-array" count="5" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon09-mesh-vertices">
+          <input semantic="POSITION" source="#NGon09-mesh-positions"/>
+        </vertices>
+        <triangles material="negro" count="3">
+          <input semantic="VERTEX" source="#NGon09-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon09-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon09-mesh-map-channel1" offset="2" set="1"/>
+          <p>2 0 2 3 1 3 4 2 4 1 3 1 2 0 2 4 2 4 0 4 0 1 3 1 4 2 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon11-mesh" name="NGon11">
+      <mesh>
+        <source id="NGon11-mesh-positions">
+          <float_array id="NGon11-mesh-positions-array" count="15">85.065 0 0 26.2865 80.9016 0 -68.819 49.9999 0 -68.819 -49.9999 0 26.2865 -80.9016 0</float_array>
+          <technique_common>
+            <accessor source="#NGon11-mesh-positions-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon11-mesh-normals">
+          <float_array id="NGon11-mesh-normals-array" count="15">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon11-mesh-normals-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon11-mesh-map-channel1">
+          <float_array id="NGon11-mesh-map-channel1-array" count="15">0.999501 0.5 0.5 0.617916 0.999501 0.5 0.000499 0.808708 0.5 0.000499 0.191292 0.5 0.617916 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon11-mesh-map-channel1-array" count="5" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon11-mesh-vertices">
+          <input semantic="POSITION" source="#NGon11-mesh-positions"/>
+        </vertices>
+        <triangles material="negro" count="3">
+          <input semantic="VERTEX" source="#NGon11-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon11-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon11-mesh-map-channel1" offset="2" set="1"/>
+          <p>2 0 2 3 1 3 4 2 4 1 3 1 2 0 2 4 2 4 0 4 0 1 3 1 4 2 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon17-mesh" name="NGon17">
+      <mesh>
+        <source id="NGon17-mesh-positions">
+          <float_array id="NGon17-mesh-positions-array" count="15">85.065 0 0 26.2865 80.9016 0 -68.819 49.9999 0 -68.819 -49.9999 0 26.2865 -80.9016 0</float_array>
+          <technique_common>
+            <accessor source="#NGon17-mesh-positions-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon17-mesh-normals">
+          <float_array id="NGon17-mesh-normals-array" count="15">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon17-mesh-normals-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon17-mesh-map-channel1">
+          <float_array id="NGon17-mesh-map-channel1-array" count="15">0.999501 0.5 0.5 0.617916 0.999501 0.5 0.000499 0.808708 0.5 0.000499 0.191292 0.5 0.617916 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon17-mesh-map-channel1-array" count="5" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon17-mesh-vertices">
+          <input semantic="POSITION" source="#NGon17-mesh-positions"/>
+        </vertices>
+        <triangles material="negro" count="3">
+          <input semantic="VERTEX" source="#NGon17-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon17-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon17-mesh-map-channel1" offset="2" set="1"/>
+          <p>2 0 2 3 1 3 4 2 4 1 3 1 2 0 2 4 2 4 0 4 0 1 3 1 4 2 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon25-mesh" name="NGon25">
+      <mesh>
+        <source id="NGon25-mesh-positions">
+          <float_array id="NGon25-mesh-positions-array" count="15">85.065 0 0 26.2865 80.9016 0 -68.819 49.9999 0 -68.819 -49.9999 0 26.2865 -80.9016 0</float_array>
+          <technique_common>
+            <accessor source="#NGon25-mesh-positions-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon25-mesh-normals">
+          <float_array id="NGon25-mesh-normals-array" count="15">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon25-mesh-normals-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon25-mesh-map-channel1">
+          <float_array id="NGon25-mesh-map-channel1-array" count="15">0.999501 0.5 0.5 0.617916 0.999501 0.5 0.000499 0.808708 0.5 0.000499 0.191292 0.5 0.617916 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon25-mesh-map-channel1-array" count="5" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon25-mesh-vertices">
+          <input semantic="POSITION" source="#NGon25-mesh-positions"/>
+        </vertices>
+        <triangles material="negro" count="3">
+          <input semantic="VERTEX" source="#NGon25-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon25-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon25-mesh-map-channel1" offset="2" set="1"/>
+          <p>2 0 2 3 1 3 4 2 4 1 3 1 2 0 2 4 2 4 0 4 0 1 3 1 4 2 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon03-mesh" name="NGon03">
+      <mesh>
+        <source id="NGon03-mesh-positions">
+          <float_array id="NGon03-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon03-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon03-mesh-normals">
+          <float_array id="NGon03-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon03-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon03-mesh-map-channel1">
+          <float_array id="NGon03-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon03-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon03-mesh-vertices">
+          <input semantic="POSITION" source="#NGon03-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon03-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon03-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon03-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon02-mesh" name="NGon02">
+      <mesh>
+        <source id="NGon02-mesh-positions">
+          <float_array id="NGon02-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon02-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon02-mesh-normals">
+          <float_array id="NGon02-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon02-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon02-mesh-map-channel1">
+          <float_array id="NGon02-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon02-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon02-mesh-vertices">
+          <input semantic="POSITION" source="#NGon02-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon02-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon02-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon02-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon04-mesh" name="NGon04">
+      <mesh>
+        <source id="NGon04-mesh-positions">
+          <float_array id="NGon04-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon04-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon04-mesh-normals">
+          <float_array id="NGon04-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon04-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon04-mesh-map-channel1">
+          <float_array id="NGon04-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon04-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon04-mesh-vertices">
+          <input semantic="POSITION" source="#NGon04-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon04-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon04-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon04-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon31-mesh" name="NGon31">
+      <mesh>
+        <source id="NGon31-mesh-positions">
+          <float_array id="NGon31-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon31-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon31-mesh-normals">
+          <float_array id="NGon31-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon31-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon31-mesh-map-channel1">
+          <float_array id="NGon31-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon31-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon31-mesh-vertices">
+          <input semantic="POSITION" source="#NGon31-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon31-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon31-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon31-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon19-mesh" name="NGon19">
+      <mesh>
+        <source id="NGon19-mesh-positions">
+          <float_array id="NGon19-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon19-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon19-mesh-normals">
+          <float_array id="NGon19-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon19-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon19-mesh-map-channel1">
+          <float_array id="NGon19-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon19-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon19-mesh-vertices">
+          <input semantic="POSITION" source="#NGon19-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon19-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon19-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon19-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon12-mesh" name="NGon12">
+      <mesh>
+        <source id="NGon12-mesh-positions">
+          <float_array id="NGon12-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon12-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon12-mesh-normals">
+          <float_array id="NGon12-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon12-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon12-mesh-map-channel1">
+          <float_array id="NGon12-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon12-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon12-mesh-vertices">
+          <input semantic="POSITION" source="#NGon12-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon12-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon12-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon12-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon22-mesh" name="NGon22">
+      <mesh>
+        <source id="NGon22-mesh-positions">
+          <float_array id="NGon22-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon22-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon22-mesh-normals">
+          <float_array id="NGon22-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon22-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon22-mesh-map-channel1">
+          <float_array id="NGon22-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon22-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon22-mesh-vertices">
+          <input semantic="POSITION" source="#NGon22-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon22-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon22-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon22-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon21-mesh" name="NGon21">
+      <mesh>
+        <source id="NGon21-mesh-positions">
+          <float_array id="NGon21-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon21-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon21-mesh-normals">
+          <float_array id="NGon21-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon21-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon21-mesh-map-channel1">
+          <float_array id="NGon21-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon21-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon21-mesh-vertices">
+          <input semantic="POSITION" source="#NGon21-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon21-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon21-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon21-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon20-mesh" name="NGon20">
+      <mesh>
+        <source id="NGon20-mesh-positions">
+          <float_array id="NGon20-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon20-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon20-mesh-normals">
+          <float_array id="NGon20-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon20-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon20-mesh-map-channel1">
+          <float_array id="NGon20-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon20-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon20-mesh-vertices">
+          <input semantic="POSITION" source="#NGon20-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon20-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon20-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon20-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon32-mesh" name="NGon32">
+      <mesh>
+        <source id="NGon32-mesh-positions">
+          <float_array id="NGon32-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon32-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon32-mesh-normals">
+          <float_array id="NGon32-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon32-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon32-mesh-map-channel1">
+          <float_array id="NGon32-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon32-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon32-mesh-vertices">
+          <input semantic="POSITION" source="#NGon32-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon32-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon32-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon32-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon13-mesh" name="NGon13">
+      <mesh>
+        <source id="NGon13-mesh-positions">
+          <float_array id="NGon13-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon13-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon13-mesh-normals">
+          <float_array id="NGon13-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon13-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon13-mesh-map-channel1">
+          <float_array id="NGon13-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon13-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon13-mesh-vertices">
+          <input semantic="POSITION" source="#NGon13-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon13-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon13-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon13-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon14-mesh" name="NGon14">
+      <mesh>
+        <source id="NGon14-mesh-positions">
+          <float_array id="NGon14-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon14-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon14-mesh-normals">
+          <float_array id="NGon14-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon14-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon14-mesh-map-channel1">
+          <float_array id="NGon14-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon14-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon14-mesh-vertices">
+          <input semantic="POSITION" source="#NGon14-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon14-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon14-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon14-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon28-mesh" name="NGon28">
+      <mesh>
+        <source id="NGon28-mesh-positions">
+          <float_array id="NGon28-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon28-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon28-mesh-normals">
+          <float_array id="NGon28-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon28-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon28-mesh-map-channel1">
+          <float_array id="NGon28-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon28-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon28-mesh-vertices">
+          <input semantic="POSITION" source="#NGon28-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon28-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon28-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon28-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon18-mesh" name="NGon18">
+      <mesh>
+        <source id="NGon18-mesh-positions">
+          <float_array id="NGon18-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon18-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon18-mesh-normals">
+          <float_array id="NGon18-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon18-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon18-mesh-map-channel1">
+          <float_array id="NGon18-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon18-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon18-mesh-vertices">
+          <input semantic="POSITION" source="#NGon18-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon18-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon18-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon18-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon06-mesh" name="NGon06">
+      <mesh>
+        <source id="NGon06-mesh-positions">
+          <float_array id="NGon06-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon06-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon06-mesh-normals">
+          <float_array id="NGon06-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon06-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon06-mesh-map-channel1">
+          <float_array id="NGon06-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon06-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon06-mesh-vertices">
+          <input semantic="POSITION" source="#NGon06-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon06-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon06-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon06-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon29-mesh" name="NGon29">
+      <mesh>
+        <source id="NGon29-mesh-positions">
+          <float_array id="NGon29-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon29-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon29-mesh-normals">
+          <float_array id="NGon29-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon29-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon29-mesh-map-channel1">
+          <float_array id="NGon29-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon29-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon29-mesh-vertices">
+          <input semantic="POSITION" source="#NGon29-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon29-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon29-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon29-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon16-mesh" name="NGon16">
+      <mesh>
+        <source id="NGon16-mesh-positions">
+          <float_array id="NGon16-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon16-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon16-mesh-normals">
+          <float_array id="NGon16-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon16-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon16-mesh-map-channel1">
+          <float_array id="NGon16-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon16-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon16-mesh-vertices">
+          <input semantic="POSITION" source="#NGon16-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon16-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon16-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon16-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon05-mesh" name="NGon05">
+      <mesh>
+        <source id="NGon05-mesh-positions">
+          <float_array id="NGon05-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon05-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon05-mesh-normals">
+          <float_array id="NGon05-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon05-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon05-mesh-map-channel1">
+          <float_array id="NGon05-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon05-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon05-mesh-vertices">
+          <input semantic="POSITION" source="#NGon05-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon05-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon05-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon05-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon30-mesh" name="NGon30">
+      <mesh>
+        <source id="NGon30-mesh-positions">
+          <float_array id="NGon30-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon30-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon30-mesh-normals">
+          <float_array id="NGon30-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon30-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon30-mesh-map-channel1">
+          <float_array id="NGon30-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon30-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon30-mesh-vertices">
+          <input semantic="POSITION" source="#NGon30-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon30-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon30-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon30-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="NGon15-mesh" name="NGon15">
+      <mesh>
+        <source id="NGon15-mesh-positions">
+          <float_array id="NGon15-mesh-positions-array" count="18">100 0 0 50 86.6025 0 -50 86.6025 0 -100 -0.000008 0 -50 -86.6025 0 50 -86.6025 0</float_array>
+          <technique_common>
+            <accessor source="#NGon15-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon15-mesh-normals">
+          <float_array id="NGon15-mesh-normals-array" count="18">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#NGon15-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="NGon15-mesh-map-channel1">
+          <float_array id="NGon15-mesh-map-channel1-array" count="18">0.999501 0.5 0.5 0.74975 0.9995 0.5 0.25025 0.9995 0.5 0.000499 0.5 0.5 0.25025 0.000499 0.5 0.74975 0.000499 0.5</float_array>
+          <technique_common>
+            <accessor source="#NGon15-mesh-map-channel1-array" count="6" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="NGon15-mesh-vertices">
+          <input semantic="POSITION" source="#NGon15-mesh-positions"/>
+        </vertices>
+        <triangles material="blanco" count="4">
+          <input semantic="VERTEX" source="#NGon15-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#NGon15-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#NGon15-mesh-map-channel1" offset="2" set="1"/>
+          <p>3 0 3 4 1 4 5 2 5 2 3 2 3 0 3 5 2 5 1 4 1 2 3 2 5 2 5 0 5 0 1 4 1 5 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="footballmio.max" name="footballmio_max">
+      <node id="Group02-node" name="Group02" type="NODE">
+        <translate>-0.026882 0.083059 -0.000008</translate>
+        <scale>0.243824 0.243824 0.243824</scale>
+        <node id="Group02-node_PIVOT" name="Group02_PIVOT" type="NODE">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <extra>
+            <technique profile="MAX3D">
+              <helper>
+                <bounding_min>-242.734 -238.967 -232.742</bounding_min>
+                <bounding_max>242.734 238.968 232.743</bounding_max>
+              </helper>
+            </technique>
+          </extra>
+        </node>
+        <node id="NGon01-node" name="NGon01" type="NODE">
+          <translate>0.005508 -0.008331 -232.742</translate>
+          <rotate>0 0 1 -90</rotate>
+          <instance_geometry url="#NGon01-mesh">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="negro" target="#negro"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="NGon07-node" name="NGon07" type="NODE">
+          <translate>0.005411 -170.139 -180.17</translate>
+          <rotate>0.465377 -0.465378 -0.752893 -106.048</rotate>
+          <node id="NGon07-node_PIVOT" name="NGon07_PIVOT" type="NODE">
+            <matrix>1 0 0 -85.065 0 1 0 -0.000001 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#NGon07-mesh">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="negro" target="#negro"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="NGon08-node" name="NGon08" type="NODE">
+          <translate>161.809 -52.5818 -180.17</translate>
+          <rotate>-0.52397 0.082989 0.847684 -195.294</rotate>
+          <node id="NGon08-node_PIVOT" name="NGon08_PIVOT" type="NODE">
+            <matrix>1 0 0 -85.065 0 1 0 -0.000001 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#NGon08-mesh">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="negro" target="#negro"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="NGon27-node" name="NGon27" type="NODE">
+          <translate>-0.007797 170.139 180.17</translate>
+          <rotate>0.647922 -0.647922 0.400493 -223.651</rotate>
+          <node id="NGon27-node_PIVOT" name="NGon27_PIVOT" type="NODE">
+            <matrix>1 0 0 -85.065 0 1 0 -0.000001 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#NGon27-mesh">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="negro" target="#negro"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="NGon10-node" name="NGon10" type="NODE">
+          <translate>-161.798 -52.5817 -180.17</translate>
+          <rotate>0.151653 -0.9575 -0.245346 -65.6889</rotate>
+          <node id="NGon10-node_PIVOT" name="NGon10_PIVOT" type="NODE">
+            <matrix>1 0 0 -85.065 0 1 0 -0.000001 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#NGon10-mesh">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="negro" target="#negro"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="NGon26-node" name="NGon26" type="NODE">
+          <translate>161.796 52.5818 180.17</translate>
+          <rotate>-0.155708 0.983103 -0.096246 -117.428</rotate>
+          <node id="NGon26-node_PIVOT" name="NGon26_PIVOT" type="NODE">
+            <matrix>1 0 0 -85.065 0 1 0 -0.000001 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#NGon26-mesh">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="negro" target="#negro"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="NGon24-node" name="NGon24" type="NODE">
+          <translate>-100.008 -137.63 180.17</translate>
+          <rotate>0.780468 0.397668 0.482422 -152.38</rotate>
+          <node id="NGon24-node_PIVOT" name="NGon24_PIVOT" type="NODE">
+            <matrix>1 0 0 -85.065 0 1 0 -0.000001 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#NGon24-mesh">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="negro" target="#negro"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="NGon23-node" name="NGon23" type="NODE">
+          <translate>99.9922 -137.63 180.17</translate>
+          <rotate>0.437106 0.857869 0.270184 -124.129</rotate>
+          <node id="NGon23-node_PIVOT" name="NGon23_PIVOT" type="NODE">
+            <matrix>1 0 0 -85.065 0 1 0 -0.000001 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#NGon23-mesh">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="negro" target="#negro"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="NGon09-node" name="NGon09" type="NODE">
+          <translate>100.006 137.63 -180.17</translate>
+          <rotate>-0.507874 -0.258775 0.821644 -134.567</rotate>
+          <node id="NGon09-node_PIVOT" name="NGon09_PIVOT" type="NODE">
+            <matrix>1 0 0 -85.065 0 1 0 -0.000001 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#NGon09-mesh">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="negro" target="#negro"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="Group01-node" name="Group01" type="NODE">
+          <translate>0 0.000007 0.000274</translate>
+          <node id="Group01-node_PIVOT" name="Group01_PIVOT" type="NODE">
+            <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+            <extra>
+              <technique profile="MAX3D">
+                <helper>
+                  <bounding_min>-242.734 -238.967 -232.743</bounding_min>
+                  <bounding_max>242.734 238.968 232.742</bounding_max>
+                </helper>
+              </technique>
+            </extra>
+          </node>
+          <node id="NGon03-node" name="NGon03" type="NODE">
+            <translate>50.0056 68.8107 -232.743</translate>
+            <rotate>-0.403524 0.293177 0.866727 -79.9435</rotate>
+            <node id="NGon03-node_PIVOT" name="NGon03_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon03-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+          <node id="NGon02-node" name="NGon02" type="NODE">
+            <translate>-49.9944 68.8107 -232.743</translate>
+            <rotate>-1 0 0 -37.377</rotate>
+            <node id="NGon02-node_PIVOT" name="NGon02_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon02-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+          <node id="NGon04-node" name="NGon04" type="NODE">
+            <translate>-49.9944 68.8107 -232.743</translate>
+            <rotate>0.793486 0.576501 -0.195006 -149.952</rotate>
+            <scale>-1 -1 -1</scale>
+            <node id="NGon04-node_PIVOT" name="NGon04_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon04-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+          <node id="NGon31-node" name="NGon31" type="NODE">
+            <translate>180.89 -111.338 127.593</translate>
+            <rotate>0.727616 0.528644 -0.437161 -117.929</rotate>
+            <node id="NGon31-node_PIVOT" name="NGon31_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon31-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+          <node id="NGon19-node" name="NGon19" type="NODE">
+            <translate>-80.9097 26.2952 232.742</translate>
+            <rotate>0.793485 -0.576501 0.195006 -149.951</rotate>
+            <node id="NGon19-node_PIVOT" name="NGon19_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon19-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+          <node id="NGon12-node" name="NGon12" type="NODE">
+            <translate>-49.991 206.444 -127.594</translate>
+            <rotate>-1 0 0 -79.178</rotate>
+            <node id="NGon12-node_PIVOT" name="NGon12_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon12-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+          <node id="NGon22-node" name="NGon22" type="NODE">
+            <translate>80.8936 26.2953 232.742</translate>
+            <rotate>-0.403524 -0.293177 -0.866727 -79.9435</rotate>
+            <scale>-1 -1 -1</scale>
+            <node id="NGon22-node_PIVOT" name="NGon22_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon22-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+          <node id="NGon21-node" name="NGon21" type="NODE">
+            <translate>-50.0079 -68.8104 232.742</translate>
+            <rotate>1 0.000000 0 -142.623</rotate>
+            <node id="NGon21-node_PIVOT" name="NGon21_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon21-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+          <node id="NGon20-node" name="NGon20" type="NODE">
+            <translate>-0.007976 85.0737 232.742</translate>
+            <rotate>0.103552 0.3187 0.942182 -214.042</rotate>
+            <scale>-1 -1 -1</scale>
+            <node id="NGon20-node_PIVOT" name="NGon20_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon20-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+          <node id="NGon32-node" name="NGon32" type="NODE">
+            <translate>161.79 137.645 127.593</translate>
+            <rotate>0.242897 0.747557 -0.618191 -157.285</rotate>
+            <node id="NGon32-node_PIVOT" name="NGon32_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon32-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+          <node id="NGon13-node" name="NGon13" type="NODE">
+            <translate>180.904 111.338 -127.594</translate>
+            <rotate>-0.659413 0.479092 0.579349 -102.862</rotate>
+            <node id="NGon13-node_PIVOT" name="NGon13_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon13-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+          <node id="NGon14-node" name="NGon14" type="NODE">
+            <translate>161.803 -137.645 -127.594</translate>
+            <rotate>-0.202762 0.624039 0.754628 -152.446</rotate>
+            <node id="NGon14-node_PIVOT" name="NGon14_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon14-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+          <node id="NGon28-node" name="NGon28" type="NODE">
+            <translate>-80.9094 196.419 127.593</translate>
+            <rotate>-0.242896 0.747557 -0.618191 -202.715</rotate>
+            <node id="NGon28-node_PIVOT" name="NGon28_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon28-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+          <node id="NGon18-node" name="NGon18" type="NODE">
+            <translate>-0.007965 85.0737 232.742</translate>
+            <rotate>-0.29417 0.905361 -0.306245 -191.365</rotate>
+            <node id="NGon18-node_PIVOT" name="NGon18_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon18-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+          <node id="NGon06-node" name="NGon06" type="NODE">
+            <translate>-80.8961 -26.2948 -232.743</translate>
+            <rotate>0.294169 0.905361 -0.306246 -168.635</rotate>
+            <scale>-1 -1 -1</scale>
+            <node id="NGon06-node_PIVOT" name="NGon06_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon06-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+          <node id="NGon29-node" name="NGon29" type="NODE">
+            <translate>-211.805 -16.2393 127.593</translate>
+            <rotate>0.727616 -0.528644 0.437162 -117.929</rotate>
+            <node id="NGon29-node_PIVOT" name="NGon29_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon29-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+          <node id="NGon16-node" name="NGon16" type="NODE">
+            <translate>-211.792 16.2393 -127.594</translate>
+            <rotate>-0.659413 -0.479092 -0.579349 -102.862</rotate>
+            <node id="NGon16-node_PIVOT" name="NGon16_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon16-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+          <node id="NGon05-node" name="NGon05" type="NODE">
+            <translate>80.9072 -26.295 -232.743</translate>
+            <rotate>-0.103552 0.3187 0.942182 -145.958</rotate>
+            <node id="NGon05-node_PIVOT" name="NGon05_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon05-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+          <node id="NGon30-node" name="NGon30" type="NODE">
+            <translate>-50.0041 -206.444 127.593</translate>
+            <rotate>1 0.000000 0 -100.822</rotate>
+            <node id="NGon30-node_PIVOT" name="NGon30_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon30-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+          <node id="NGon15-node" name="NGon15" type="NODE">
+            <translate>-80.8962 -196.419 -127.594</translate>
+            <rotate>0.202763 0.624039 0.754628 -207.554</rotate>
+            <node id="NGon15-node_PIVOT" name="NGon15_PIVOT" type="NODE">
+              <matrix>1 0 0 50 0 1 0 86.6025 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#NGon15-mesh">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="blanco" target="#blanco"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+            </node>
+          </node>
+        </node>
+        <node id="NGon11-node" name="NGon11" type="NODE">
+          <translate>-99.9947 137.63 -180.17</translate>
+          <rotate>-0.365902 -0.718122 0.59196 -81.44</rotate>
+          <node id="NGon11-node_PIVOT" name="NGon11_PIVOT" type="NODE">
+            <matrix>1 0 0 -85.065 0 1 0 -0.000001 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#NGon11-mesh">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="negro" target="#negro"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="NGon17-node" name="NGon17" type="NODE">
+          <translate>-0.007951 0.008751 232.742</translate>
+          <rotate>0.891007 -0.45399 0.000000 -180</rotate>
+          <instance_geometry url="#NGon17-mesh">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="negro" target="#negro"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="NGon25-node" name="NGon25" type="NODE">
+          <translate>-161.812 52.5817 180.17</translate>
+          <rotate>0.843002 -0.133518 0.521076 -189.436</rotate>
+          <node id="NGon25-node_PIVOT" name="NGon25_PIVOT" type="NODE">
+            <matrix>1 0 0 -85.065 0 1 0 -0.000001 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#NGon25-mesh">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="negro" target="#negro"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+      </node>
+      <extra>
+        <technique profile="FCOLLADA">
+          <start_time>0</start_time>
+          <end_time>3.33333</end_time>
+        </technique>
+      </extra>
+      <extra>
+        <technique profile="MAX3D">
+          <frame_rate>30</frame_rate>
+        </technique>
+      </extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#footballmio.max"/>
+  </scene>
+</COLLADA>

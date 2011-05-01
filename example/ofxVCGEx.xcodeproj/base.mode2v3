@@ -265,17 +265,11 @@
 									<array>
 										<string>E4B69B4A0A3A1720003C02F2</string>
 										<string>E4B69E1C0A3A1BDC003C02F2</string>
-										<string>BB4B014C10F69532006C3DED</string>
-										<string>4B56996A13582CBA005B5755</string>
-										<string>4BC197F613613D9200D1AA60</string>
 									</array>
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>17</integer>
-											<integer>11</integer>
-											<integer>10</integer>
-											<integer>8</integer>
+											<integer>1</integer>
 											<integer>0</integer>
 										</array>
 									</array>
@@ -442,8 +436,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>4BB37935136C876C002AF40E</string>
-				<string>4BB37936136C876C002AF40E</string>
+				<string>4BAB8781136DF73300BAB1FD</string>
+				<string>4BAB8782136DF73300BAB1FD</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -481,9 +475,7 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>1C530D52069F1CE1000CFCEE</string>
-		<string>/users/base/c_languages/openframeworks/openFrameworks/apps/personal_apps/ofxVCGEx/ofxVCGEx.xcodeproj</string>
-		<string>4BB37938136C876C002AF40E</string>
-		<string>4BB37939136C876C002AF40E</string>
+		<string>/users/base/c_languages/openframeworks/openFrameworks/addons/ofxVCGLib/example/ofxVCGEx.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>994 273 431 605 0 0 1440 878 </string>
@@ -700,7 +692,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>4BB37937136C876C002AF40E</string>
+				<string>4BAB8783136DF73300BAB1FD</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

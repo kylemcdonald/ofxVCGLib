@@ -48,6 +48,10 @@
 // still no refine wtf
 //#include<vcg/complex/trimesh/refine.h>
 
+// VCG headers
+#include <vcg/space/color4.h>
+#include <vcg/space/colorspace.h>
+
 #include "ofxVCGCloud.h"
 //#include "ofxVCGVolume.h"
 
