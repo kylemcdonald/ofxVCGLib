@@ -1,0 +1,207 @@
+// !$*UTF8*$!
+{
+	4BB3CF9F136095F20083A7ED /* ofxAssimpModelLoader.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1352, 13312}}";
+			sepNavSelRange = "{10259, 0}";
+			sepNavVisRange = "{9698, 1255}";
+		};
+	};
+	4BB3CFA0136095F20083A7ED /* ofxAssimpModelLoader.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1352, 1807}}";
+			sepNavSelRange = "{33, 0}";
+			sepNavVisRange = "{0, 1124}";
+		};
+	};
+	4BC197F713613D9200D1AA60 /* ofxMeshFace.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1054, 1963}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1011}";
+		};
+	};
+	4BC197F813613D9200D1AA60 /* ofxMeshFace.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1054, 858}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1301}";
+		};
+	};
+	4BC197F913613D9200D1AA60 /* ofxVCGCloud.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1054, 761}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 223}";
+		};
+	};
+	4BC197FA13613D9200D1AA60 /* ofxVCGLib.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {917, 7488}}";
+			sepNavSelRange = "{3253, 0}";
+			sepNavVisRange = "{6750, 1632}";
+		};
+	};
+	4BC197FB13613D9200D1AA60 /* ofxVCGLib.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1054, 1235}}";
+			sepNavSelRange = "{2341, 0}";
+			sepNavVisRange = "{866, 2031}";
+		};
+	};
+	4BC197FC13613D9200D1AA60 /* ofxVCGLibDefinitions.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {917, 1729}}";
+			sepNavSelRange = "{630, 320}";
+			sepNavVisRange = "{0, 1392}";
+		};
+	};
+	4BC197FD13613D9200D1AA60 /* ofxVCGLibDefinitions.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1054, 2210}}";
+			sepNavSelRange = "{1645, 6}";
+			sepNavVisRange = "{1281, 1111}";
+		};
+	};
+	4BC197FE13613D9200D1AA60 /* ofxVCGVolume.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1054, 1378}}";
+			sepNavSelRange = "{2243, 0}";
+			sepNavVisRange = "{3, 1411}";
+		};
+	};
+	4BC6E60913661DE8005C69A3 /* vcgRayMeshIntersection.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1054, 761}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 880}";
+		};
+	};
+	4BD38B9B1367D38A00E9B18D /* ofxVCGLib.cpp:379 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 4BC197FA13613D9200D1AA60 /* ofxVCGLib.cpp */;
+		functionName = "ofxVCG::cleanCloudPoints(vector<ofVec3f> *in, vector<ofVec3f> *out, float radius)";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 379;
+		location = emptyExampleDebug;
+		modificationTime = 325573379.816819;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	4BD69D511350A39700189A49 /* ofxVCGEx */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = ofxVCGEx;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	4BD69D5D1350A3AE00189A49 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	4BD69D5E1350A3AE00189A49 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	4BE72B95136A078D00AB5B1D /* ofxVCGMesh.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1054, 858}}";
+			sepNavSelRange = "{604, 1086}";
+			sepNavVisRange = "{0, 1704}";
+		};
+	};
+	4BE72B96136A078D00AB5B1D /* ofxVCGMesh.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {917, 2717}}";
+			sepNavSelRange = "{3267, 0}";
+			sepNavVisRange = "{2681, 1080}";
+		};
+	};
+	E4B69B4C0A3A1720003C02F2 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 4BD69D511350A39700189A49 /* ofxVCGEx */;
+		activeTarget = E4B69B5A0A3A1756003C02F2 /* ofxVCGEx */;
+		addToTargets = (
+			E4B69B5A0A3A1756003C02F2 /* ofxVCGEx */,
+		);
+		breakpoints = (
+			4BD38B9B1367D38A00E9B18D /* ofxVCGLib.cpp:379 */,
+		);
+		codeSenseManager = 4BD69D5E1350A3AE00189A49 /* Code sense */;
+		executables = (
+			4BD69D511350A39700189A49 /* ofxVCGEx */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 325879555;
+			PBXWorkspaceStateSaveDate = 325879555;
+		};
+		sourceControlManager = 4BD69D5D1350A3AE00189A49 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	E4B69B5A0A3A1756003C02F2 /* ofxVCGEx */ = {
+		activeExec = 0;
+		executables = (
+			4BD69D511350A39700189A49 /* ofxVCGEx */,
+		);
+	};
+	E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1352, 553}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 414}";
+		};
+	};
+	E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1054, 1469}}";
+			sepNavSelRange = "{614, 0}";
+			sepNavVisRange = "{112, 1251}";
+		};
+	};
+	E4B69E1F0A3A1BDC003C02F2 /* testApp.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1054, 761}}";
+			sepNavSelRange = "{668, 0}";
+			sepNavVisRange = "{0, 743}";
+		};
+	};
+}

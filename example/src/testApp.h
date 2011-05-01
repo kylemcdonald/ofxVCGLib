@@ -25,7 +25,13 @@ class testApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 	
 	ofMesh mesh1, mesh2;
-	ofxAssimpModelLoader modelLoader;
+	ofxAssimpModelLoader modelLoader1, modelLoader2;
 	ofLight	light;
-		
+	
+	ofMesh *joined;
+	bool hasJoined;
+	
+	vector<ofVec3f> in;
+	vector<ofVec3f> out;
+	
 };

@@ -1,6 +1,6 @@
 /*
  *  ofxMeshFace.h
- *  emptyExample
+ *  ofxVCGEx
  *
  */
 

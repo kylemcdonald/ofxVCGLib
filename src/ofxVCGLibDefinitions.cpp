@@ -1,6 +1,6 @@
 /*
  *  ofxVCGLibDefinitions.cpp
- *  emptyExample
+ *  ofxVCGEx
  *
  *  Created by base on 21/04/11.
  *  Copyright 2011 __MyCompanyName__. All rights reserved.

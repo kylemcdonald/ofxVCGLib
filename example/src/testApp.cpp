@@ -3,17 +3,31 @@
 //--------------------------------------------------------------
 void testApp::setup(){
 	
-	if(modelLoader.loadModel("duck_triangulate.dae", true)) {
-		mesh1 = modelLoader.getMesh(0);
-		mesh2 = modelLoader.getMesh(0);
+	hasJoined = false;
+	
+	if(modelLoader1.loadModel("duck_triangulate.dae", true)) {
+		mesh1 = modelLoader1.getMesh(0);
 		
 	} else {
-		cout << " model can't load? " << endl;
+		cout << " model 1 can't load? " << endl;
+	}
+	
+	if(modelLoader2.loadModel("soccer.DAE", true)) {
+		mesh2 = modelLoader2.getMesh(0);
+	} else {
+		cout << " model 2 can't load? " << endl;
 	}
 	
 	glShadeModel(GL_SMOOTH);
     light.setup();
     ofEnableSeparateSpecularLight();
+	
+	int i = 0;
+	while( i < 1000 )
+	{
+		in.push_back(ofVec3f(ofRandom(100), ofRandom(100), ofRandom(100)));
+		i++;
+	}
 	
 }
 
@@ -31,15 +45,28 @@ void testApp::draw(){
 		ofTranslate(300, 400, 0);
 		ofRotate(180, 1.f, 0, 0);
 		mesh1.drawFaces();//mesh1.drawWireframe();
+		ofRotate(180, -1.f, 0, 0);
 		ofTranslate(200, 0, 0);
-		mesh2.drawFaces();//mesh2.drawWireframe();
+		mesh2.drawFaces();
+	
+		if(hasJoined)
+		{
+			ofTranslate(200, 0, 0);
+			joined->drawFaces();
+		}
+	
 	ofPopMatrix();
 
 }
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
-	ofxVCG::smoothMesh(&mesh1, 3, 2);
+	//ofxVCG::smoothMesh(&mesh1, 3, 2);
+	//joined = ofxVCG::joinMeshes(&mesh1, &mesh2);
+	//hasJoined = true;
+	
+	ofxVCG::cleanCloudPoints(&in, &out, 3.f);
+	
 }
 
 //--------------------------------------------------------------

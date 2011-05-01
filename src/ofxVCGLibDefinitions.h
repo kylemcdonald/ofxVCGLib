@@ -1,6 +1,6 @@
 /*
  *  ofxVCGLibDefinitions.h
- *  emptyExample
+ *  ofxVCGEx
  *
  */
 

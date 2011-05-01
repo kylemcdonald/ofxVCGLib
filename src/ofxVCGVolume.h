@@ -1,6 +1,6 @@
 /*
  *  ofxVCGVoxel.h
- *  emptyExample
+ *  ofxVCGEx
  *
  *
  */
