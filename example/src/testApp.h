@@ -15,10 +15,8 @@ public:
 	
 	ofMesh mesh;
 	ofxAssimpModelLoader modelLoader;
-	ofLight	light;
 	
-	vector<ofVec3f> in;
-	vector<ofVec3f> out;
+	ofLight	light;
 	
 	ofEasyCam cam;
 };

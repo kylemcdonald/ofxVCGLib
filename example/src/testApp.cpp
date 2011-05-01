@@ -10,9 +10,7 @@ void testApp::setup(){
 		cout << "model failed to load" << endl;
 	}
 
-	glShadeModel(GL_SMOOTH);
 	light.setup();
-	ofEnableSeparateSpecularLight();
 }
 
 //--------------------------------------------------------------
@@ -21,13 +19,12 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){	
-	ofBackground(50, 50, 50, 0);
+	ofBackground(50);
 	ofSetColor(255);
 	
 	cam.begin();
 	glEnable(GL_DEPTH_TEST);
 	
-	ofPushMatrix();
 	mesh.drawFaces();
 	
 	/*
@@ -36,8 +33,6 @@ void testApp::draw(){
 		joined->drawFaces();
 	}
 	*/
-	
-	ofPopMatrix();
 	
 	glDisable(GL_DEPTH_TEST);
 	cam.end();
