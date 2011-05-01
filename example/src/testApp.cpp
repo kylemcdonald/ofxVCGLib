@@ -9,16 +9,23 @@ void testApp::setup(){
 	} else {
 		cout << "model failed to load" << endl;
 	}
-
-	//light.setup();
+	
+	useShading = false;
+	
+	light.setup();
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
+	if(useShading) {
+		ofEnableLighting();
+	} else {
+		ofDisableLighting();
+	}
 }
 
 //--------------------------------------------------------------
-void testApp::draw(){	
+void testApp::draw(){
 	ofBackground(50);
 	ofSetColor(255);
 	
@@ -26,10 +33,18 @@ void testApp::draw(){
 	glEnable(GL_DEPTH_TEST);
 	
 	ofTranslate(-100, 0);
-	mesh.drawWireframe();
+	if(useShading) {
+		mesh.drawFaces();
+	} else {
+		mesh.drawWireframe();
+	}
 	
 	ofTranslate(200, 0);
-	cleanMesh.drawWireframe();
+	if(useShading) {
+		cleanMesh.drawFaces();
+	} else {
+		cleanMesh.drawWireframe();
+	}
 	
 	glDisable(GL_DEPTH_TEST);
 	cam.end();
@@ -39,7 +54,11 @@ void testApp::draw(){
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
-	int amount = key - '1';
-	amount = ofClamp(key, 1, 9);
-	ofxVCG::cleanCloudPoints(&mesh, &cleanMesh, amount);
+	if(key == 's') {
+		useShading = !useShading;
+	} else {
+		int amount = key - '1';
+		amount = ofClamp(amount, 1, 9) * 3;
+		ofxVCG::cleanCloudPoints(&mesh, &cleanMesh, amount);
+	}
 }

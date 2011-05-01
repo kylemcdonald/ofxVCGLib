@@ -362,32 +362,9 @@ void getFacesFromMesh(vector<ofxMeshFace>* faces, ofMesh* mesh){
 void constructMeshFromFaces(ofMesh* mesh, vector<ofxMeshFace>* faces){
 }
 
-void ofMeshToVcg(ofMesh* mesh, innerMesh* inner) {
-	vector<ofVec3f>& from = mesh->getVertices();
-
-	cout << "ofMeshToVcg() on ofMesh of size " << from.size() << endl;
-	
-	Allocator<innerMesh>::AddVertices(*inner, from.size());
-	
-	innerMesh::VertexIterator vi = inner->vert.begin();
-	vector<ofVec3f>::iterator pit = from.begin();
-	while(pit != from.end()) // go through all points, add them
-	{	
-		(*vi).update( *pit ); 
-		vi++;
-		pit++;
-	}
-	
-	// need to add more code here that handles any faces, normals, etc. that might exist in ofMesh
-	// it looks like that's very similar to what innerMesh(ofMesh*) constructor is doing,
-	// but the innerMesh constructor shouldn't also be guessing things like normals if they don't already exist (imo) - kyle
-}
-
 void cleanCloudPoints(ofMesh* in, ofMesh* out, float radius) {
 
-	innerMesh m;
-	
-	ofMeshToVcg(in, &m);
+	innerMesh m(in);
 		
 	vcg::tri::UpdateBounding<innerMesh>::Box(m);
 	

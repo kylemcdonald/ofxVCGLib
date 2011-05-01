@@ -18,5 +18,7 @@ public:
 	
 	ofLight	light;
 	
+	bool useShading;
+	
 	ofEasyCam cam;
 };
