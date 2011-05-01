@@ -13,7 +13,7 @@ public:
 	
 	void keyPressed(int key);
 	
-	ofMesh mesh;
+	ofMesh mesh, cleanMesh;
 	ofxAssimpModelLoader modelLoader;
 	
 	ofLight	light;

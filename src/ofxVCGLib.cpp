@@ -8,13 +8,15 @@
 
 #include "ofxVCGLib.h"
 
-ofMesh* ofxVCG::intersectMeshes(vector<ofMesh> meshes)
+namespace ofxVCG {
+
+ofMesh* intersectMeshes(vector<ofMesh> meshes)
 {
 	
 	//tri::Append<MyMesh,MyMesh>::Mesh(ml,mr);
 }
 
-void ofxVCG::cleanMesh(ofMesh* mesh)
+void cleanMesh(ofMesh* mesh)
 {
 	
 	innerMesh m(mesh);
@@ -34,7 +36,7 @@ void ofxVCG::cleanMesh(ofMesh* mesh)
 }
 
 // make this read in files too
-void ofxVCG::smoothMesh(ofMesh* mesh, int steps, int smoothingAmount)
+void smoothMesh(ofMesh* mesh, int steps, int smoothingAmount)
 {
 	innerMesh m(mesh);
 	
@@ -46,7 +48,7 @@ void ofxVCG::smoothMesh(ofMesh* mesh, int steps, int smoothingAmount)
 	
 }
 
-void ofxVCG::vcgMeshToOf(innerMesh* inner, ofMesh* mesh)
+void vcgMeshToOf(innerMesh* inner, ofMesh* mesh)
 {
 	// this desperately needs to be smarter, big meshes are going to
 	// be bears to deal with.
@@ -71,7 +73,7 @@ void ofxVCG::vcgMeshToOf(innerMesh* inner, ofMesh* mesh)
 }
 							
 
-void ofxVCG::refineMesh(ofMesh* mesh, int steps, int type=0)
+void refineMesh(ofMesh* mesh, int steps, int type=0)
 {
 	
 	float length = 0;
@@ -105,16 +107,16 @@ void ofxVCG::refineMesh(ofMesh* mesh, int steps, int type=0)
 }
 
 // hmm
-void ofxVCG::simplifyNode(ofNode* node, int degree)
+void simplifyNode(ofNode* node, int degree)
 {
 }
 
 
-ofMesh* ofxVCG::differenceMeshes(vector<ofMesh> meshes)
+ofMesh* differenceMeshes(vector<ofMesh> meshes)
 {
 }
 
-ofMesh* ofxVCG::joinMeshes( ofMesh* toBeParent, vector<ofMesh*> toBeJoined )
+ofMesh* joinMeshes( ofMesh* toBeParent, vector<ofMesh*> toBeJoined )
 {
 	innerMesh mP(toBeParent);
 	
@@ -129,7 +131,7 @@ ofMesh* ofxVCG::joinMeshes( ofMesh* toBeParent, vector<ofMesh*> toBeJoined )
 	
 }
 
-ofMesh* ofxVCG::joinMeshes( ofMesh* toBeParent, ofMesh* toBeChild )
+ofMesh* joinMeshes( ofMesh* toBeParent, ofMesh* toBeChild )
 {
 	innerMesh mP(toBeParent);
 	innerMesh mC(toBeChild);
@@ -147,28 +149,28 @@ ofMesh* ofxVCG::joinMeshes( ofMesh* toBeParent, ofMesh* toBeChild )
 
 
 
-ofNode* ofxVCG::intersectNodes(vector<ofNode> nodes)
+ofNode* intersectNodes(vector<ofNode> nodes)
 {
 }
 
 
-ofNode* ofxVCG::differenceNodes(vector<ofNode> nodes)
+ofNode* differenceNodes(vector<ofNode> nodes)
 {
 }
 
 
-ofNode* ofxVCG::joinNodes(vector<ofNode> nodes)
+ofNode* joinNodes(vector<ofNode> nodes)
 {
 }
 
 
 
-bool ofxVCG::meshIntersection(ofMesh* aNode, ofMesh* bNode)
+bool meshIntersection(ofMesh* aNode, ofMesh* bNode)
 {
 }
 
 
-bool ofxVCG::nodeIntersection(ofNode* aNode, ofNode* bNode)
+bool nodeIntersection(ofNode* aNode, ofNode* bNode)
 {
 }
 
@@ -176,7 +178,7 @@ bool ofxVCG::nodeIntersection(ofNode* aNode, ofNode* bNode)
 
 // smart pointers would be freaking sweet here
 
-ofMesh* ofxVCG::createMeshFromPoints(vector<ofVec3f> points, int degreeOfFidelity, meshConstructionAlgo useMeshConstructionAlgo = BALL_PIVOT_CONSTRUCTION)
+ofMesh* createMeshFromPoints(vector<ofVec3f> points, int degreeOfFidelity, meshConstructionAlgo useMeshConstructionAlgo = BALL_PIVOT_CONSTRUCTION)
 {
 	
 	innerMesh m;	
@@ -235,7 +237,7 @@ ofMesh* ofxVCG::createMeshFromPoints(vector<ofVec3f> points, int degreeOfFidelit
 }
 
 
-ofMesh* ofxVCG::createMeshFromPoints(vector<float> points, int degreeOfFidelity, meshConstructionAlgo useMeshConstructionAlgo = BALL_PIVOT_CONSTRUCTION)
+ofMesh* createMeshFromPoints(vector<float> points, int degreeOfFidelity, meshConstructionAlgo useMeshConstructionAlgo = BALL_PIVOT_CONSTRUCTION)
 {
 	
 	innerMesh m;
@@ -300,7 +302,7 @@ ofMesh* ofxVCG::createMeshFromPoints(vector<float> points, int degreeOfFidelity,
 }
 
 
-vcgRayMeshIntersection ofxVCG::getFacesForRay(ofxVCGRay ray, ofMesh* mesh)
+vcgRayMeshIntersection getFacesForRay(ofxVCGRay ray, ofMesh* mesh)
 {
 	innerMesh m(mesh);
 	float t;
@@ -344,25 +346,25 @@ vcgRayMeshIntersection ofxVCG::getFacesForRay(ofxVCGRay ray, ofMesh* mesh)
 	return intersectionData;
 }
 
-void ofxVCG::pointsToPlane(vector<ofVec2f> points)
+void pointsToPlane(vector<ofVec2f> points)
 {
 }
 
 
 // don't really like the c-style-ness of this
-void ofxVCG::getNeighboringFaces(ofxMeshFace* face, ofMesh* mesh)
+void getNeighboringFaces(ofxMeshFace* face, ofMesh* mesh)
 {
 }
 
-void ofxVCG::getFacesFromMesh(vector<ofxMeshFace>* faces, ofMesh* mesh){
+void getFacesFromMesh(vector<ofxMeshFace>* faces, ofMesh* mesh){
 }
 
-void ofxVCG::constructMeshFromFaces(ofMesh* mesh, vector<ofxMeshFace>* faces){
+void constructMeshFromFaces(ofMesh* mesh, vector<ofxMeshFace>* faces){
 }
 
 
-void ofxVCG::cleanCloudPoints(vector<ofVec3f> *in, vector<ofVec3f> *out, float radius) {
-	
+void cleanCloudPoints(ofMesh* in, ofMesh* out, float radius) {
+
 	innerMesh m;
 	cout << in->size() << endl;
 	Allocator<innerMesh>::AddVertices(m, in->size());
@@ -553,3 +555,5 @@ int getFaceNum() {
 	
 }
 */
+
+}

@@ -44,5 +44,5 @@ void testApp::keyPressed(int key){
 	//joined = ofxVCG::joinMeshes(&mesh1, &mesh2);
 	//hasJoined = true;
 	
-	//ofxVCG::cleanCloudPoints(&mesh.getVertices(), &out, 3.f);
+	ofxVCG::cleanCloudPoints(&mesh, &cleanMesh, 3.f);
 }
