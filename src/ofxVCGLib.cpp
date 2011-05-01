@@ -368,10 +368,12 @@ void cleanCloudPoints(ofMesh* in, ofMesh* out, float radius) {
 		
 	vcg::tri::UpdateBounding<innerMesh>::Box(m);
 	
-	// this should be replaced by some code that checks whether the mesh already has normals + faces, and only rebuilds them if it doesn't
-	vcg::tri::UpdateNormals<innerMesh>::PerFace(m);
-	tri::BallPivoting<innerMesh>* pivot = new tri::BallPivoting<innerMesh>(m); 	
-	pivot->BuildMesh();
+	if(m.getFaceIndices().size() == 0) {
+		cout << "no faces, rebuilding topology" << endl;
+		tri::BallPivoting<innerMesh>* pivot = new tri::BallPivoting<innerMesh>(m); 	
+		pivot->BuildMesh();
+		vcg::tri::UpdateNormals<innerMesh>::PerFace(m);
+	}
 	
 	// now clean the mesh
 	int dupdV = tri::Clean<innerMesh>::RemoveDuplicateVertex(m); // any dup'd vertices
