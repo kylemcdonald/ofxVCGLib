@@ -10,7 +10,7 @@ void testApp::setup(){
 		cout << "model failed to load" << endl;
 	}
 
-	light.setup();
+	//light.setup();
 }
 
 //--------------------------------------------------------------
@@ -25,24 +25,21 @@ void testApp::draw(){
 	cam.begin();
 	glEnable(GL_DEPTH_TEST);
 	
-	mesh.drawFaces();
+	ofTranslate(-100, 0);
+	mesh.drawWireframe();
 	
-	/*
-	if(hasJoined) {
-		ofTranslate(200, 0, 0);
-		joined->drawFaces();
-	}
-	*/
+	ofTranslate(200, 0);
+	cleanMesh.drawWireframe();
 	
 	glDisable(GL_DEPTH_TEST);
 	cam.end();
+	
+	ofDrawBitmapString("Press a key from 1-9 to clean the mesh.", 10, 20);
 }
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
-	//ofxVCG::smoothMesh(&mesh1, 3, 2);
-	//joined = ofxVCG::joinMeshes(&mesh1, &mesh2);
-	//hasJoined = true;
-	
-	ofxVCG::cleanCloudPoints(&mesh, &cleanMesh, 3.f);
+	int amount = key - '1';
+	amount = ofClamp(key, 1, 9);
+	ofxVCG::cleanCloudPoints(&mesh, &cleanMesh, amount);
 }

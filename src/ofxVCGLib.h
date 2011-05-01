@@ -89,7 +89,8 @@ namespace ofxVCG {
 	vcgRayMeshIntersection getFacesForRay(ofxVCGRay ray, ofMesh* mesh);
 	
 	// aka the kyle mcdonald functions
+	void ofMeshToVcg(ofMesh* inner, innerMesh* mesh);
 	void vcgMeshToOf(innerMesh* inner, ofMesh* mesh);
-	void vcgVec3ToOf(innerMesh* inner, ofMesh* mesh);
+	//void vcgVec3ToOf(innerMesh* inner, ofMesh* mesh);
 	
 };

@@ -362,25 +362,37 @@ void getFacesFromMesh(vector<ofxMeshFace>* faces, ofMesh* mesh){
 void constructMeshFromFaces(ofMesh* mesh, vector<ofxMeshFace>* faces){
 }
 
+void ofMeshToVcg(ofMesh* mesh, innerMesh* inner) {
+	vector<ofVec3f>& from = mesh->getVertices();
+
+	cout << "ofMeshToVcg() on ofMesh of size " << from.size() << endl;
+	
+	Allocator<innerMesh>::AddVertices(*inner, from.size());
+	
+	innerMesh::VertexIterator vi = inner->vert.begin();
+	vector<ofVec3f>::iterator pit = from.begin();
+	while(pit != from.end()) // go through all points, add them
+	{	
+		(*vi).update( *pit ); 
+		vi++;
+		pit++;
+	}
+	
+	// need to add more code here that handles any faces, normals, etc. that might exist in ofMesh
+	// it looks like that's very similar to what innerMesh(ofMesh*) constructor is doing,
+	// but the innerMesh constructor shouldn't also be guessing things like normals if they don't already exist (imo) - kyle
+}
 
 void cleanCloudPoints(ofMesh* in, ofMesh* out, float radius) {
 
 	innerMesh m;
-	cout << in->size() << endl;
-	Allocator<innerMesh>::AddVertices(m, in->size());
 	
-	innerMesh::VertexIterator vi = m.vert.begin();
-	vector<ofVec3f>::iterator pit = in->begin();
-	while(pit != in->end()) // go through all points, add them
-	{	
-		(*vi).update( *pit ); 
-		++vi;
-		++pit;
-	}
-	
+	ofMeshToVcg(in, &m);
+		
 	vcg::tri::UpdateBounding<innerMesh>::Box(m);
-	vcg::tri::UpdateNormals<innerMesh>::PerFace(m);
 	
+	// this should be replaced by some code that checks whether the mesh already has normals + faces, and only rebuilds them if it doesn't
+	vcg::tri::UpdateNormals<innerMesh>::PerFace(m);
 	tri::BallPivoting<innerMesh>* pivot = new tri::BallPivoting<innerMesh>(m); 	
 	pivot->BuildMesh();
 	
@@ -402,18 +414,9 @@ void cleanCloudPoints(ofMesh* in, ofMesh* out, float radius) {
 	tri::UpdateTopology<innerMesh>::FaceFace(m);
 	tri::UpdateTopology<innerMesh>::VertexFace(m);
 	
-	vi = m.vert.begin();
-	while(vi != m.vert.end())
-	{
-		if(!vi->IsD())
-		{
-			out->push_back( (*vi).toOf() ); // turn to ofVec3f
-		}
-		++vi;
-	}
+	vcgMeshToOf(&m, out);
 	
-	cout << " mesh has " << m.vn << " vertices and " << m.fn << " faces while the cloud has " << out->size() << " vec3f " << endl;
-	
+	cout << " mesh has " << m.vn << " vertices and " << m.fn << " faces while the cloud has " << out->getVertices().size() << " vec3f " << endl;
 }
 
 /*
