@@ -18,7 +18,7 @@ innerMesh::innerMesh(ofMesh* mesh)
 	Allocator<innerMesh>::AddVertices(*this,mesh->getNumVertices());
 	Allocator<innerMesh>::AddFaces(*this,mesh->getNumIndices()/3 + 1);
 	
-	vector<ofColor>::iterator c_it;
+	vector<ofFloatColor>::iterator c_it;
 	bool hasColors = mesh->getNumColors() > 0;
 	if(hasColors) {
 		c_it = mesh->getColors().begin();
@@ -30,7 +30,7 @@ innerMesh::innerMesh(ofMesh* mesh)
 	while(inVit != mesh->getVertices().end()) {
 		
 		if(hasColors) {
-			(*vi).C().SetRGB((*c_it).r, (*c_it).g, (*c_it).b);
+			(*vi).C().SetRGB((*c_it).r, (*c_it).g, (*c_it).b); // this should probably be multiplied by 255
 			++c_it;
 		}
 		
